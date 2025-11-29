@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 import logging
 import os
-
+import uuid
 from cassandra.cluster import Cluster
-
 import model
 
 # Set logger
@@ -15,39 +14,28 @@ log.addHandler(handler)
 
 # Read env vars related to Cassandra App
 CLUSTER_IPS = os.getenv('CASSANDRA_CLUSTER_IPS', '127.0.0.1')
-KEYSPACE = os.getenv('CASSANDRA_KEYSPACE', 'logistics')
+KEYSPACE = os.getenv('CASSANDRA_KEYSPACE', 'ecommerce')
 REPLICATION_FACTOR = os.getenv('CASSANDRA_REPLICATION_FACTOR', '1')
 
 
 def print_menu():
     mm_options = {
-        
+        1: "select_searches_by_user",
+        2: "select_user_navigation_sessions",
+        3: "brands visited by user",
+        4: "products views by user",
+        5: "Purchases by user",
+        6: "Clicks in ad's by user",
+        7: "Time in category by user",
+        8: "Clicks on notifications by user",
+        9: "Errors per session by user",
+        10: "Products promotions",
+        11: "Exit"
     }
     for key in mm_options.keys():
         print(key, '--', mm_options[key])
 
-def set_customer_email():
-    print("\nSample customer emails:")
-    for email, name, _, _ in model.CUSTOMERS:
-        print(f"  - {email} ({name})")
-    
-    email = input('\n**** Customer email to use: ').strip()
-    log.info(f"Customer email set to {email}")
-    return email
 
-def get_order_number():
-    order_number = input('Enter order number: ').strip()
-    return order_number
-
-def get_shipment_status():
-    print(f"\nAvailable statuses: {', '.join(model.SHIPMENT_STATUSES)}")
-    status = input('Enter shipment status: ').strip()
-    return status
-
-def get_shipment_type():
-    print(f"\nAvailable types: {', '.join(model.SHIPMENT_TYPES)}")
-    ship_type = input('Enter shipment type: ').strip()
-    return ship_type
 
 def main():
 
@@ -60,67 +48,66 @@ def main():
 
     model.create_schema(session)
 
-    customer_email = set_customer_email()
+    model.bulk_insert(session)
 
-    while(True):
-        print("\n" + "="*50)
+    while True:
         print_menu()
-        try:
-            option = int(input('\nEnter your choice: '))
-        except ValueError:
-            print("Please enter a valid number.")
-            continue
+        opt = int(input("Select an option: "))
+        match opt:
+            case 1:
+                user = input("\nType user id: ")
+                user_uuid = uuid.UUID(user)
+                print()
+                model.searches_by_user(session, user_uuid) 
+            case 2:
+                user = input("\nType user id: ")
+                user_uuid = uuid.UUID(user)
+                print()
+                model.user_navigation_sessions(session,user_uuid)
+            case 3:
+                user = input("\nType user id: ")
+                user_uuid = uuid.UUID(user)
+                print()
+                model.brands_searchs_by_user(session,user_uuid)
+            case 4:
+                user = input("\nType user id: ")
+                user_uuid = uuid.UUID(user)
+                print()
+                model.products_views_by_user(session,user_uuid)
+            case 5:
+                user = input("\nType user id: ")
+                user_uuid = uuid.UUID(user)
+                print()
+                model.purchases_by_user(session,user_uuid)
+            case 6:
+                user = input("\nType user id: ")
+                user_uuid = uuid.UUID(user)
+                print()
+                model.clicked_ads_by_user(session,user_uuid)
+            case 7:
+                user = input("\nType user id: ")
+                user_uuid = uuid.UUID(user)
+                print()
+                model.time_per_category_by_user(session,user_uuid)
+            case 8:
+                user = input("\nType user id: ")
+                user_uuid = uuid.UUID(user)
+                print()
+                model.clicks_notifications_by_user(session,user_uuid)
+            case 9:
+                user = input("\nType user id: ")
+                user_uuid = uuid.UUID(user)
+                print()
+                model.errors_by_user(session,user_uuid)
+            case 10:
+                promotion = input("\nType id of promotion to see: ")
+                promotion_uuid = uuid.UUID(promotion)
+                print()
+                model.promotions_by_user(session,promotion_uuid)
+            case 11:
+                break
 
-        if option == 0:
-            print("Populating sample data...")
-            model.bulk_insert(session)
-            print("Sample data populated successfully!")
-
-        elif option == 1:
-            print(f"\nQ1: Getting orders for customer: {customer_email}")
-            model.get_orders_by_customer(session, customer_email)
-
-        elif option == 2:
-            order_number = get_order_number()
-            model.get_products_by_order(session,order_number)
-
-        elif option == 3:
-            order_number = get_order_number()
-            model.all_shipments(session,order_number)
-
-        elif option == 4:
-            order_number = get_order_number()
-            bottom_range, top_range = model.get_date_range()
-            model.all_shipments_range(session,order_number, bottom_range, top_range)
-
-        elif option == 5:
-            order_number = get_order_number()
-            bottom_range, top_range = model.get_date_range()
-            status = get_shipment_status()
-            model.all_shipments_range_status(session,order_number, status,bottom_range,top_range)
-
-        elif option == 6:
-            ty = get_shipment_type()
-            order_number = get_order_number()
-            bottom_range, top_range = model.get_date_range()
-            model.all_shipments_order_type_range(session,ty,order_number,bottom_range,top_range)
-
-        elif option == 7:
-            order_number = get_order_number()
-            ty = get_shipment_type()
-            stat = get_shipment_status()
-            bottom_range, top_range = model.get_date_range()
-            model.all_shipments_order_tssd(session,order_number,ty,stat,bottom_range,top_range)
-
-        elif option == 8:
-            customer_email = set_customer_email()
-
-        elif option == 9:
-            print("Exiting logistics application...")
-            exit(0)            
-
-        else:
-            print("Invalid option. Please try again.")
+        
 
 if __name__ == '__main__':
     main()
