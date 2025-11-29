@@ -15,7 +15,8 @@ log.addHandler(handler)
 # API base
 API_URL = os.getenv("ECOM_API_URL", "http://localhost:8000")
 
-# Print
+# Format
+
 def print_doc(title, doc):
     print("\n" + "="*60)
     print(f" {title}")
@@ -24,7 +25,9 @@ def print_doc(title, doc):
         print(f"{k}: {v}")
     print("="*60 + "\n")
 
+
 # Products
+
 def list_products(name=None, category=None, min_price=None, max_price=None, limit=20, skip=0):
     endpoint = f"{API_URL}/products"
     params = {}
@@ -55,8 +58,8 @@ def get_product(pid):
         print(f"Error: {r.status_code} {r.text}")
 
 
-
 # Users
+
 def list_users():
     endpoint = f"{API_URL}/users"
     r = requests.get(endpoint)
@@ -77,7 +80,9 @@ def get_user(uid):
     else:
         print(f"Error: {r.status_code} {r.text}")
 
+
 # Orders
+
 def list_orders():
     endpoint = f"{API_URL}/orders"
     r = requests.get(endpoint)
@@ -99,8 +104,8 @@ def get_order(oid):
         print(f"Error: {r.status_code} {r.text}")
 
 
+# Colections
 
-# Collections
 def list_categories():
     endpoint = f"{API_URL}/categories"
     r = requests.get(endpoint)
@@ -131,6 +136,7 @@ def list_promotions():
         print(f"Error: {r.status_code} {r.text}")
 
 
+
 def main():
 
     actions = [
@@ -143,7 +149,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("action", choices=actions)
 
-    # ID
+    # Shared ID
     parser.add_argument("-i", "--id", help="Document ID", default=None)
 
     # Product filters
@@ -151,7 +157,7 @@ def main():
     parser.add_argument("--category", default=None)
     parser.add_argument("--min_price", type=float, default=None)
     parser.add_argument("--max_price", type=float, default=None)
-    parser.add_argument("--limit", type=int, default=None)
+    parser.add_argument("--limit", type=int, default=20)
     parser.add_argument("--skip", type=int, default=0)
 
     args = parser.parse_args()
