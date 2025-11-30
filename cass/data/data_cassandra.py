@@ -1,42 +1,43 @@
 import uuid
 
-def generate_uuid():
-    return uuid.uuid4()
+NAMESPACE_BASE = uuid.UUID('a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11') 
 
+def generate_uuid(name):
+    return uuid.uuid5(NAMESPACE_BASE, name)
 
 PRODUCTS = [
-    ("deporte", "taquetes hypervenom nike", 2500),
-    ("salud","creatina herbalife", 399.9),
-    ("moda","playera manga corta color negro", 679),
-    ("electronica","iphone 17", 35000),
-    ("accesorios","reloj tissot plateado fondo verde", 5899)
+    ("Futbol", "Taquetes Hypervenom Nike", 2500.00),
+    ("Nutricion Deportiva", "Proteina Whey Gold Standard ON", 1199.50),
+    ("Running", "Playera Dri-FIT manga corta color negro Puma", 679.00),
+    ("Electronica Deportiva", "Reloj GPS multideporte Garmin Fenix 7", 13500.00),
+    ("Accesorios Deportivos", "Balon de futbol Adidas Champions League", 899.00)
 ]
 USERS = [
     ("miguel franco"),
     ("angel aceves"),
-    ("karen torres"),
+    ("karen santana"),
     ("omar madriz"),
     ("abraham hernandez"),
     ("juan pablo perez"),
     ("emiliano villagran")
 ]
 BRANDS = [
-    ("adidas"),
-    ("nike"),
-    ("apple"),
-    ("H&M"),
-    ("Victus"),
-    ("herbalife"),
-    ("Tissot")
+    ("Adidas"),
+    ("Nike"),
+    ("Garmin"),
+    ("Puma"),
+    ("Under Armour"),
+    ("Optimum Nutrition"),
+    ("New Balance")
 ]
 SEARCH_TERMS = [
-    ("relojes", "accesorios"),
-    ("ropa", "moda"),
-    ("suplementos", "salud"),
-    ("videojuegos", "videojuegos"),
-    ("Celulares", "electronica"),
-    ("computadora", "electronica"),
-    ("jerseys", "deporte")
+    ("zapatos de fútbol", "Fútbol"),
+    ("suplementos deportivos", "Nutrición Deportiva"),
+    ("ropa deportiva", "Running"),
+    ("relojes deportivos", "Electrónica Deportiva"),
+    ("balones", "Accesorios Deportivos"),
+    ("tenis para correr", "Running"),
+    ("jerseys", "Fútbol")
 ]
 ADS = [
     ("Pinta con confianza pinta con berel"),
@@ -62,5 +63,6 @@ PROMOTION_TYPE = [
     ("mothers day promotion"),
     ("kids day promotion")
 ]
-USER_IDS = {user: generate_uuid() for user in USERS}
-PROMOTIONS_IDS = {promotion: generate_uuid() for promotion in PROMOTION_TYPE}
+
+USER_IDS = {user: generate_uuid(user) for user in USERS}
+PROMOTIONS_IDS = {promotion: generate_uuid(promotion) for promotion in PROMOTION_TYPE}

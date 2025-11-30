@@ -401,10 +401,10 @@ def create_schema(session):
 #queries
 # Q1: select_searches_by_user
 def searches_by_user(session, user_id):
-
+    print("ENTRAMOS A LA FUNCION")
     stmt = session.prepare(SELECT_SEARCH_BY_USER)
     rows = session.execute(stmt, [user_id])
-    
+    print(user_id)
     for row in rows:
         print(f"\n=== Search by user: {row.user_name} ===")
         print(f"User_name: {row.user_name}")
