@@ -28,7 +28,7 @@ def main():
     while True:
         print_menu()
         option = int(input("Selecciona una opción: "))
-
+    
         if option == 1:
             populate.consulta_productos_comprados(diccionarios['usuarios'])
         elif option == 2:

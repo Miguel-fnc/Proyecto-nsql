@@ -401,16 +401,14 @@ def create_schema(session):
 #queries
 # Q1: select_searches_by_user
 def searches_by_user(session, user_id):
-    print("ENTRAMOS A LA FUNCION")
     stmt = session.prepare(SELECT_SEARCH_BY_USER)
     rows = session.execute(stmt, [user_id])
-    print(user_id)
     for row in rows:
-        print(f"\n=== Search by user: {row.user_name} ===")
-        print(f"User_name: {row.user_name}")
-        print(f"Search term: {row.search_term}")
-        print(f"Category: {row.category}")
-        print(f"Search date: {row.search_date}")
+        print(f"\n=== Búsqueda del usuario: {row.user_name} ===")
+        print(f"Nombre de usuario: {row.user_name}")
+        print(f"Término de búsqueda: {row.search_term}")
+        print(f"Categoría: {row.category}")
+        print(f"Fecha de búsqueda: {row.search_date}")
         print()
 
 # Q2: select_user_navigation_sessions
@@ -419,11 +417,11 @@ def user_navigation_sessions(session, user_id):
     rows = session.execute(stmt,([user_id]))
 
     for row in rows:
-        print(f"\n=========User {row.user_name} navigation session==============")
-        print(f'user_name: {row.user_name}')
-        print(f'Session: {row.session_id}')
-        print(f'Page name: {row.page_name}')
-        print(f'Duration: {row.duration_seconds} seconds')
+        print(f"\n=========Sesión de navegación del usuario {row.user_name}==============")
+        print(f'Nombre de usuario: {row.user_name}')
+        print(f'Sesión: {row.session_id}')
+        print(f'Página: {row.page_name}')
+        print(f'Duración: {row.duration_seconds} segundos')
         print("===============================\n")
 
 #Q3 marcas visitadas por usuario
@@ -432,11 +430,11 @@ def brands_searchs_by_user(session, user_id):
     rows = session.execute(stmt, ([user_id]))
 
     for row in rows:
-        print(f"\n=========brands visited by {row.user_name}==============")
-        print(f'User name: {row.user_name}')
-        print(f'Brand name: {row.brand_name}')
-        print(f'Visits count: {row.visit_count}')
-        print(f'last visit: {row.last_visit} ')
+        print(f"\n=========Marcas visitadas por {row.user_name}==============")
+        print(f'Nombre de usuario: {row.user_name}')
+        print(f'Nombre de la marca: {row.brand_name}')
+        print(f'Número de visitas: {row.visit_count}')
+        print(f'Última visita: {row.last_visit} ')
         print("===============================\n")
 
 #Q4
@@ -445,12 +443,12 @@ def products_views_by_user(session, user_id):
     rows = session.execute(stmt, ([user_id]))
 
     for row in rows:
-        print(f"\n=========Products views by {row.user_name}==============")
-        print(f'User name: {row.user_name}')
-        print(f'Product name: {row.product_name}')
-        print(f'Product id: {row.product_id}')
-        print(f'Category: {row.category} ')
-        print(f'View date: {row.view_date}')
+        print(f"\n=========Vistas de productos por {row.user_name}==============")
+        print(f'Nombre de usuario: {row.user_name}')
+        print(f'Nombre del producto: {row.product_name}')
+        print(f'ID del producto: {row.product_id}')
+        print(f'Categoría: {row.category} ')
+        print(f'Fecha de vista: {row.view_date}')
         print("===============================\n")
 
 #Q5
@@ -459,14 +457,14 @@ def purchases_by_user(session, user_id):
     rows = session.execute(stmt, ([user_id]))
 
     for row in rows:
-        print(f"\n=========Purchases by {row.user_name}==============")
-        print(f'User name: {row.user_name}')
-        print(f'Purchase id: {row.purchase_id}')
-        print(f'Product name: {row.product_name}')
-        print(f'Quantity: {row.quantity} ')
-        print(f'Price: {row.price:.2f}')
+        print(f"\n=========Compras realizadas por {row.user_name}==============")
+        print(f'Nombre de usuario: {row.user_name}')
+        print(f'ID de compra: {row.purchase_id}')
+        print(f'Producto: {row.product_name}')
+        print(f'Cantidad: {row.quantity} ')
+        print(f'Precio: {row.price:.2f}')
         print(f'Total: {(row.quantity * row.price):.2f}')
-        print(f'Purchase date: {row.purchase_date}')
+        print(f'Fecha de compra: {row.purchase_date}')
         print("===============================\n")
 
 #Q6
@@ -475,11 +473,11 @@ def clicked_ads_by_user(session, user_id):
     rows = session.execute(stmt, ([user_id]))
 
     for row in rows:
-        print(f"\n=========Ad's clicked by {row.user_name}==============")
-        print(f'User name: {row.user_name}')
-        print(f'Ad name: {row.ad_name}')
-        print(f'Click date: {row.click_date}')
-        print(f'Action Type: {row.action_type}')
+        print(f"\n=========Anuncios clickeados por {row.user_name}==============")
+        print(f'Nombre de usuario: {row.user_name}')
+        print(f'Nombre del anuncio: {row.ad_name}')
+        print(f'Fecha del clic: {row.click_date}')
+        print(f'Tipo de acción: {row.action_type}')
         print("===============================\n")
 
 #Q7
@@ -488,11 +486,11 @@ def time_per_category_by_user(session, user_id):
     rows = session.execute(stmt, ([user_id]))
 
     for row in rows:
-        print(f"\n=========Time by category by {row.user_name}==============")
-        print(f'User name: {row.user_name}')
-        print(f'Category name: {row.category_name}')
-        print(f'Seconds spend: {row.total_time_seconds}')
-        print(f'Last session: {row.last_session}')
+        print(f"\n=========Tiempo por categoría de {row.user_name}==============")
+        print(f'Nombre de usuario: {row.user_name}')
+        print(f'Nombre de categoría: {row.category_name}')
+        print(f'Segundos invertidos: {row.total_time_seconds}')
+        print(f'Última sesión: {row.last_session}')
         print("===============================\n")  
 
 #Q8
@@ -501,11 +499,11 @@ def clicks_notifications_by_user(session, user_id):
     rows = session.execute(stmt, ([user_id]))
 
     for row in rows:
-        print(f"\n=========Notifications clicked by {row.user_name}==============")
-        print(f'User name: {row.user_name}')
-        print(f'Notification id: {row.notification_id}')
-        print(f'Promotion type: {row.promotion_type}')
-        print(f'Click date: {row.click_date}')
+        print(f"\n=========Notificaciones clickeadas por {row.user_name}==============")
+        print(f'Nombre de usuario: {row.user_name}')
+        print(f'ID de notificación: {row.notification_id}')
+        print(f'Tipo de promoción: {row.promotion_type}')
+        print(f'Fecha del clic: {row.click_date}')
         print("===============================\n")   
 
 #Q9
@@ -514,11 +512,11 @@ def errors_by_user(session, user_id):
     rows = session.execute(stmt, ([user_id]))
 
     for row in rows:
-        print(f"\n=========Errors in {row.user_name} session==============")
-        print(f'Error id: {row.error_id}')
-        print(f'Error type: {row.error_type}')
-        print(f'Error message: {row.error_message}')
-        print(f'Error date: {row.error_date}')
+        print(f"\n=========Errores en la sesión de {row.user_name}==============")
+        print(f'ID de error: {row.error_id}')
+        print(f'Tipo de error: {row.error_type}')
+        print(f'Mensaje de error: {row.error_message}')
+        print(f'Fecha del error: {row.error_date}')
         print("===============================\n") 
 
 #Q10
@@ -527,10 +525,11 @@ def promotions_by_user(session, promotion_id):
     rows = session.execute(stmt, ([promotion_id]))
 
     for row in rows:
-        print(f"\n=========Info of promotion==============")
-        print(f'Promotion id: {row.promotion_id}')
-        print(f'Product id: {row.product_id}')
-        print(f'Product name: {row.product_name}')
-        print(f'Promotion start: {row.promotion_start}')
-        print(f'Promotion end: {row.promotion_end}')
-        print("===============================\n")       
+        print(f"\n=========Información de la promoción==============")
+        print(f'ID de promoción: {row.promotion_id}')
+        print(f'ID del producto: {row.product_id}')
+        print(f'Nombre del producto: {row.product_name}')
+        print(f'Inicio de promoción: {row.promotion_start}')
+        print(f'Fin de promoción: {row.promotion_end}')
+        print("===============================\n")
+      
