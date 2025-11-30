@@ -3,7 +3,29 @@ import sys
 import os
 import populate
 
-def print_menu():
+def main_general():
+    print("A que base de datos quieres acceder?")
+    print("1. Cassandra\n2. Dgraph\n3. MongoDB")
+    db_option = int(input("Selecciona una opción: "))
+    match db_option:
+        case 1:
+            from cass import app as cass_app
+            cass_app.main()
+        case 2:
+            pass
+            #from Dgraph import main as dgraph_app
+            #dgraph_app.main()
+        case 3:
+            pass
+            #from mongo import app as mongo_app
+            #mongo_app.main()
+        case _:
+            pass
+            #print("Opción no válida")
+            #sys.exit(1)
+
+main_general()
+"""def print_menu():
     mm_options = {
         1: "Productos comprados por un usuario",
         2: "Top 5 Productos mas vistos",
@@ -83,4 +105,4 @@ if __name__ == '__main__':
     try:
         main()
     except Exception as e:
-        print('Error: {}'.format(e))
+        print('Error: {}'.format(e))"""

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 import logging
+import os
 import uuid
-import model_cassandra
 from connect import get_cassandra_session
-from data.data_cassandra import USER_IDS, PROMOTIONS_IDS
+from cass.data.data_cassandra import USER_IDS, PROMOTIONS_IDS
+from cass import model_cassandra
 
 # Set logger
 log = logging.getLogger()
@@ -50,9 +51,11 @@ def promotionNames():
     print("================================================\n")
 
 def main():
+    KEYSPACE = os.getenv('CASSANDRA_KEYSPACE', 'ecommerce')
 
     log.info("Connecting to Cluster")
     session = get_cassandra_session()
+    session.set_keyspace(KEYSPACE)
 
     while True:
         print_menu()
