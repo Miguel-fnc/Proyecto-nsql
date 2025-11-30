@@ -5,9 +5,9 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import uuid
 from cassandra.cluster import Cluster
-import model
 from connect import get_cassandra_session
 from data.data_cassandra import USER_IDS, PROMOTIONS_IDS
+import model
 
 # Set logger
 log = logging.getLogger()
@@ -15,10 +15,6 @@ log.setLevel('INFO')
 handler = logging.FileHandler('logistics.log')
 handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(name)s: %(message)s"))
 log.addHandler(handler)
-
-# Read env vars related to Cassandra App
-KEYSPACE = os.getenv('CASSANDRA_KEYSPACE', 'ecommerce')
-REPLICATION_FACTOR = os.getenv('CASSANDRA_REPLICATION_FACTOR', '1')
 
 
 def print_menu():
@@ -60,13 +56,6 @@ def main():
 
     log.info("Connecting to Cluster")
     session = get_cassandra_session()
-
-    model.create_keyspace(session, KEYSPACE, REPLICATION_FACTOR)
-    session.set_keyspace(KEYSPACE)
-
-    model.create_schema(session)
-
-    model.bulk_insert(session)
 
     while True:
         print_menu()
