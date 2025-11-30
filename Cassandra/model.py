@@ -187,31 +187,35 @@ WHERE user_id = ?
 ORDER BY purchase_date DESC
 """
 
-# Q6
+#Q6
 SELECT_AD_CLICKS_BY_USER = """
 SELECT user_name, ad_name, action_type, click_date
 FROM ad_clicks_by_user
 WHERE user_id = ?
 ORDER BY click_date DESC
 """
-# Q7
+
+#Q7
 SELECT_TIME_SPENT_BY_CATEGORY_BY_USER = """
 SELECT user_name, category_name, total_time_seconds, last_session FROM time_spent_by_user
 WHERE user_id = ?
 ORDER BY category_name DESC
 """
+
 #Q8
 SELECT_ERRORS_BY_USER = """
 SELECT * FROM errors_by_user
 WHERE user_id = ?
 ORDER BY error_date DESC
 """
+
 #Q9
 SELECT_NOTIFICATIONS_CLICK_BY_USER = """
 SELECT user_name, notification_id, click_date, promotion_type FROM notifications_clicks_by_user
 WHERE user_id = ?
 ORDER BY notification_id DESC
 """
+
 #Q10
 SELECT_PRODUCTS_PROMOTION = """
 SELECT * FROM products_promotion
@@ -220,66 +224,7 @@ ORDER BY promotion_start DESC
 """
 
 # Sample data
-PRODUCTS = [
-    ("deporte", "taquetes hypervenom nike", 2500),
-    ("salud","creatina herbalife", 399.9),
-    ("moda","playera manga corta color negro", 679),
-    ("electronica","iphone 17", 35000),
-    ("accesorios","reloj tissot plateado fondo verde", 5899)
-]
-USERS = [
-    ("miguel franco"),
-    ("angel acevez"),
-    ("karen torres"),
-    ("omar madriz"),
-    ("abraham hernandez"),
-    ("juan pablo perez"),
-    ("emiliano villagran")
-]
-BRANDS = [
-    ("adidas"),
-    ("nike"),
-    ("apple"),
-    ("H&M"),
-    ("Victus"),
-    ("herbalife"),
-    ("Tissot")
-]
-SEARCH_TERMS = [
-    ("relojes", "accesorios"),
-    ("ropa", "moda"),
-    ("suplementos", "salud"),
-    ("videojuegos", "videojuegos"),
-    ("Celulares", "electronica"),
-    ("computadora", "electronica"),
-    ("jerseys", "deporte")
-]
-ADS = [
-    ("Pinta con confianza pinta con berel"),
-    ("Trikitrakatelas, galletas gamesa"),
-    ("Pinta tu ralla con comex"),
-    ("Tarjeta BBVA"),
-    ("Juguetes Mi Alegria")
-]
-ACTION_TYPE = [
-    ("on_click"),
-    ("Scroll"),
-    ("Via e-mail")
-]
-ERRORS = [
-    ("login", "email o contrasena invalida"),
-    ("compra", "numero de cuenta invalido"),
-    ("compra", "pago rechazado"),
-    ("Stock", "producto no disponible")
-]
-PROMOTION_TYPE = [
-    ("holiday promotion"),
-    ("fathers day promotion"),
-    ("mothers day promotion"),
-    ("kids day promotion")
-]
-USER_IDS = {user: generate_uuid() for user in USERS}
-
+from data.data_cassandra import PRODUCTS,USERS,BRANDS,SEARCH_TERMS,ADS,ACTION_TYPE,ERRORS,PROMOTION_TYPE,USER_IDS
 
 # Get date range from user input or use default (last 30 days)
 # Default to last 30 days if not provided
@@ -305,7 +250,6 @@ def get_date_range():
         top_range = datetime.datetime.strptime(top_range, "%Y-%m-%d")
 
     return bottom_range, top_range
-
 
 def execute_batch(session, stmt, data):
     batch_size = 10

@@ -35,8 +35,6 @@ def print_menu():
     for key in mm_options.keys():
         print(key, '--', mm_options[key])
 
-
-
 def main():
 
     log.info("Connecting to Cluster")
