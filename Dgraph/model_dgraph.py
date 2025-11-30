@@ -95,7 +95,6 @@ def load_usuarios(client,file_path):
                     'name': row['name'],
                     'email': row['email']
                 })
-        print(f"\nUsuarios cargados: {usuarios}")
         resp = txn.mutate(set_obj=usuarios)
         txn.commit()
     finally:
@@ -117,7 +116,6 @@ def load_productos(client,file_path):
                     'description': row['description'],
                     'precio': float(row['precio'])
                 })
-        print(f"\nProductos cargados: {productos}")
         resp = txn.mutate(set_obj=productos)
         txn.commit()
     finally:
@@ -138,7 +136,6 @@ def load_marcas(client, file_path):
                         'name': row['marca'],
                         'country': row['country']
                     })
-        print(f"\nMarcas cargadas: {marcas}")
         resp = txn.mutate(set_obj=marcas)
         txn.commit()
     finally:
@@ -158,7 +155,6 @@ def load_categorias(client, file_path):
                         'dgraph.type': 'Categoria',
                         'name': row['categoria']
                     })
-        print(f"\nCategorias cargadas: {categorias}")
         resp = txn.mutate(set_obj=categorias)
         txn.commit()
     finally:

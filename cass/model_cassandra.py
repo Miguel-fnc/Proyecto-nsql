@@ -9,7 +9,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import time_uuid
 from datetime import datetime, timedelta
 from cassandra.query import BatchStatement
-from data.data_cassandra import PRODUCTS,USERS,BRANDS,SEARCH_TERMS,ADS,ACTION_TYPE,ERRORS,PROMOTION_TYPE,USER_IDS,PROMOTIONS_IDS
+from cass.data.data_cassandra import PRODUCTS,USERS,BRANDS,SEARCH_TERMS,ADS,ACTION_TYPE,ERRORS,PROMOTION_TYPE,USER_IDS,PROMOTIONS_IDS
 
 # Set logger
 log = logging.getLogger()
