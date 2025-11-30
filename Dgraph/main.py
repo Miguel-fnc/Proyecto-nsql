@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
+import sys
 import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import pydgraph
 import model
 from connect import get_dgraph_client
@@ -93,6 +95,7 @@ def main():
                 }
 
         if option == 13:
+
             exit(0)
 
 
