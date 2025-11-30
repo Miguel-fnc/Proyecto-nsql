@@ -3,10 +3,10 @@ import datetime
 import logging
 import random
 import uuid
-
 import time_uuid
 from datetime import datetime, timedelta
 from cassandra.query import BatchStatement
+from data.data_cassandra import PRODUCTS,USERS,BRANDS,SEARCH_TERMS,ADS,ACTION_TYPE,ERRORS,PROMOTION_TYPE,USER_IDS,PROMOTIONS_IDS
 
 # Set logger
 log = logging.getLogger()
@@ -223,34 +223,6 @@ WHERE promotion_id = ?
 ORDER BY promotion_start DESC
 """
 
-# Sample data
-from data.data_cassandra import PRODUCTS,USERS,BRANDS,SEARCH_TERMS,ADS,ACTION_TYPE,ERRORS,PROMOTION_TYPE,USER_IDS
-
-# Get date range from user input or use default (last 30 days)
-# Default to last 30 days if not provided
-def get_date_range():
-    today = datetime.datetime.today()
-
-    bottom_range = input("Type bottom range example (YYYY-MM-DD): ").strip()
-    top_range = input("Type top range example (YYYY-MM-DD): ").strip()
-    if bottom_range == "" and top_range == "":
-        bottom_range = today - datetime.timedelta(days=30)
-        top_range = today
-
-    elif bottom_range == "" and top_range != "":
-        top_range = datetime.datetime.strptime(top_range, "%Y-%m-%d")
-        bottom_range = top_range - datetime.timedelta(days=30)
-
-    elif top_range == "" and bottom_range != "":
-        bottom_range = datetime.datetime.strptime(bottom_range, "%Y-%m-%d")
-        top_range = bottom_range + datetime.timedelta(days=30)
-
-    else:
-        bottom_range = datetime.datetime.strptime(bottom_range, "%Y-%m-%d")
-        top_range = datetime.datetime.strptime(top_range, "%Y-%m-%d")
-
-    return bottom_range, top_range
-
 def execute_batch(session, stmt, data):
     batch_size = 10
     for i in range(0, len(data), batch_size):
@@ -258,7 +230,6 @@ def execute_batch(session, stmt, data):
         for item in data[i : i+batch_size]:
             batch.add(stmt, item)
         session.execute(batch)
-
 
 def bulk_insert(session):
     # Prepare statements
@@ -371,11 +342,11 @@ def bulk_insert(session):
             errors_data.append((error_id,user_name,user_id,error_type,error_msg,error_date))
 
     #para llenar products_promotion
-    for i in range(random.randint(1, 8)):
-        promotion_id =generate_uuid()
+    for promotion in PROMOTION_TYPE:
+        promotion_id = PROMOTIONS_IDS[promotion]
         product_id = random.randint(1, 999)
         cat, product_name, pr = random.choice(PRODUCTS)
-        promotion_name = random.choice(PROMOTION_TYPE)
+        promotion_name = PROMOTION_TYPE[i]
         promotion_start = random_date(2023, 2025)
         promotion_end = promotion_start + timedelta(days=random.randint(1, 30))
         promotion_data.append((promotion_id,product_id,product_name,promotion_name,promotion_start,promotion_end))
@@ -392,7 +363,6 @@ def bulk_insert(session):
     execute_batch(session,notifications_clicks_by_user_stmt,notifications_data)
     execute_batch(session,errors_by_user_stmt,errors_data)
     execute_batch(session,products_promotion_stmt,promotion_data)
-
 
 def random_date(start_f, end_f):
     start = datetime(start_f, 1, 1)
@@ -554,7 +524,7 @@ def promotions_by_user(session, promotion_id):
     rows = session.execute(stmt, ([promotion_id]))
 
     for row in rows:
-        print(f"\n=========Info of promotion {row.promotion_name}==============")
+        print(f"\n=========Info of promotion==============")
         print(f'Promotion id: {row.promotion_id}')
         print(f'Product id: {row.product_id}')
         print(f'Product name: {row.product_name}')

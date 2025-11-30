@@ -360,3 +360,120 @@ cassandra.InvalidRequest: Error from server: code=2200 [Invalid query] message="
 2025-11-29 19:43:25,205 [INFO] root: Creating keyspace: ecommerce with replication factor 1
 2025-11-29 19:43:26,705 [INFO] root: Creating logistics schema
 2025-11-29 19:44:19,579 [WARNING] cassandra.protocol: Server warning: `USE <keyspace>` with prepared statements is considered to be an anti-pattern due to ambiguity in non-qualified table names. Please consider removing instances of `Session#setKeyspace(<keyspace>)`, `Session#execute("USE <keyspace>")` and `cluster.newSession(<keyspace>)` from your code, and always use fully qualified table names (e.g. <keyspace>.<table>). Keyspace used: ecommerce, statement keyspace: ecommerce, statement id: e3258f8502cff9f6546d2a39fdee1234
+2025-11-29 20:22:40,252 [INFO] root: Connecting to Cluster
+2025-11-29 20:22:40,257 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-29 20:22:42,505 [WARNING] cassandra.cluster: [control connection] Error connecting to 127.0.0.1:9042:
+Traceback (most recent call last):
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 3577, in _reconnect_internal
+    return self._try_connect(host)
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 3599, in _try_connect
+    connection = self._cluster.connection_factory(host.endpoint, is_control_connection=True)
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 1670, in connection_factory
+    return self.connection_class.factory(endpoint, self.connect_timeout, *args, **kwargs)
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\connection.py", line 846, in factory
+    conn = cls(endpoint, *args, **kwargs)
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\io\asyncorereactor.py", line 353, in __init__
+    self._connect_socket()
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\connection.py", line 951, in _connect_socket
+    raise socket.error(sockerr.errno, "Tried connecting to %s. Last error: %s" %
+ConnectionRefusedError: [Errno 10061] Tried connecting to [('127.0.0.1', 9042)]. Last error: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+2025-11-29 20:22:43,659 [ERROR] cassandra.cluster: Control connection failed to connect, shutting down Cluster:
+Traceback (most recent call last):
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 1740, in connect
+    self.control_connection.connect()
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 3543, in connect
+    self._set_new_connection(self._reconnect_internal())
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 3588, in _reconnect_internal
+    raise NoHostAvailable("Unable to connect to any servers", errors)
+cassandra.cluster.NoHostAvailable: ('Unable to connect to any servers', {'127.0.0.1:9042': ConnectionRefusedError(10061, "Tried connecting to [('127.0.0.1', 9042)]. Last error: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión")})
+2025-11-29 20:23:17,744 [INFO] root: Connecting to Cluster
+2025-11-29 20:23:17,747 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-29 20:23:18,638 [WARNING] cassandra.cluster: [control connection] Error connecting to 127.0.0.1:9042:
+Traceback (most recent call last):
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 3577, in _reconnect_internal
+    return self._try_connect(host)
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 3599, in _try_connect
+    connection = self._cluster.connection_factory(host.endpoint, is_control_connection=True)
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 1670, in connection_factory
+    return self.connection_class.factory(endpoint, self.connect_timeout, *args, **kwargs)
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\connection.py", line 852, in factory
+    raise conn.last_error
+cassandra.connection.ConnectionShutdown: Connection to 127.0.0.1:9042 was closed
+2025-11-29 20:23:18,659 [WARNING] cassandra.cluster: Host 127.0.0.1:9042 has been marked down
+2025-11-29 20:23:18,659 [ERROR] cassandra.cluster: Control connection failed to connect, shutting down Cluster:
+Traceback (most recent call last):
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 1740, in connect
+    self.control_connection.connect()
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 3543, in connect
+    self._set_new_connection(self._reconnect_internal())
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 3588, in _reconnect_internal
+    raise NoHostAvailable("Unable to connect to any servers", errors)
+cassandra.cluster.NoHostAvailable: ('Unable to connect to any servers', {'127.0.0.1:9042': ConnectionShutdown('Connection to 127.0.0.1:9042 was closed')})
+2025-11-29 20:24:52,244 [INFO] root: Connecting to Cluster
+2025-11-29 20:24:52,247 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-29 20:24:52,328 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-29 20:24:53,850 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-29 20:24:55,522 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-29 20:24:56,713 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-29 20:24:56,743 [INFO] root: Creating logistics schema
+2025-11-29 20:26:13,359 [INFO] root: Connecting to Cluster
+2025-11-29 20:26:13,362 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-29 20:26:13,417 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-29 20:26:14,956 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-29 20:26:16,512 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-29 20:26:17,854 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-29 20:26:18,259 [INFO] root: Creating logistics schema
+2025-11-29 20:26:37,340 [WARNING] cassandra.protocol: Server warning: `USE <keyspace>` with prepared statements is considered to be an anti-pattern due to ambiguity in non-qualified table names. Please consider removing instances of `Session#setKeyspace(<keyspace>)`, `Session#execute("USE <keyspace>")` and `cluster.newSession(<keyspace>)` from your code, and always use fully qualified table names (e.g. <keyspace>.<table>). Keyspace used: ecommerce, statement keyspace: ecommerce, statement id: e3258f8502cff9f6546d2a39fdee1234
+2025-11-29 21:12:38,530 [INFO] root: Connecting to Cluster
+2025-11-29 21:12:38,536 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-29 21:12:40,105 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-29 21:12:40,289 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-29 21:12:44,662 [WARNING] cassandra.cluster: [control connection] Error connecting to 127.0.0.1:9042:
+Traceback (most recent call last):
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 3577, in _reconnect_internal
+    return self._try_connect(host)
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 3635, in _try_connect
+    (peers_success, peers_result), (local_success, local_result) = connection.wait_for_responses(
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\connection.py", line 1124, in wait_for_responses
+    return waiter.deliver(timeout)
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\connection.py", line 1636, in deliver
+    raise OperationTimedOut()
+cassandra.OperationTimedOut: errors=None, last_host=None
+2025-11-29 21:12:44,673 [ERROR] cassandra.cluster: Control connection failed to connect, shutting down Cluster:
+Traceback (most recent call last):
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 1740, in connect
+    self.control_connection.connect()
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 3543, in connect
+    self._set_new_connection(self._reconnect_internal())
+  File "C:\Users\migue\AppData\Local\Programs\Python\Python310\lib\site-packages\cassandra\cluster.py", line 3588, in _reconnect_internal
+    raise NoHostAvailable("Unable to connect to any servers", errors)
+cassandra.cluster.NoHostAvailable: ('Unable to connect to any servers', {'127.0.0.1:9042': OperationTimedOut('errors=None, last_host=None')})
+2025-11-29 21:14:50,154 [INFO] root: Connecting to Cluster
+2025-11-29 21:14:50,157 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-29 21:14:50,198 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-29 21:14:51,730 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-29 21:14:53,670 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-29 21:14:55,071 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-29 21:14:55,256 [INFO] root: Creating logistics schema
+2025-11-29 21:17:29,174 [INFO] root: Connecting to Cluster
+2025-11-29 21:17:29,175 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-29 21:17:29,344 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-29 21:17:30,859 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-29 21:17:32,494 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-29 21:17:33,699 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-29 21:17:33,742 [INFO] root: Creating logistics schema
+2025-11-29 21:19:48,039 [INFO] root: Connecting to Cluster
+2025-11-29 21:19:48,040 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-29 21:19:48,097 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-29 21:19:49,682 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-29 21:19:51,505 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-29 21:19:52,633 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-29 21:19:52,918 [INFO] root: Creating logistics schema
+2025-11-29 21:20:26,265 [INFO] root: Connecting to Cluster
+2025-11-29 21:20:26,268 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-29 21:20:26,340 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-29 21:20:27,894 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-29 21:20:29,579 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-29 21:20:30,935 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-29 21:20:31,070 [INFO] root: Creating logistics schema
+2025-11-29 21:20:41,188 [WARNING] cassandra.protocol: Server warning: `USE <keyspace>` with prepared statements is considered to be an anti-pattern due to ambiguity in non-qualified table names. Please consider removing instances of `Session#setKeyspace(<keyspace>)`, `Session#execute("USE <keyspace>")` and `cluster.newSession(<keyspace>)` from your code, and always use fully qualified table names (e.g. <keyspace>.<table>). Keyspace used: ecommerce, statement keyspace: ecommerce, statement id: d3a672b71a54619c1bf81befc96605b2

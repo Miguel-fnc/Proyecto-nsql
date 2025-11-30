@@ -3,6 +3,7 @@ import uuid
 def generate_uuid():
     return uuid.uuid4()
 
+
 PRODUCTS = [
     ("deporte", "taquetes hypervenom nike", 2500),
     ("salud","creatina herbalife", 399.9),
@@ -12,7 +13,7 @@ PRODUCTS = [
 ]
 USERS = [
     ("miguel franco"),
-    ("angel acevez"),
+    ("angel aceves"),
     ("karen torres"),
     ("omar madriz"),
     ("abraham hernandez"),
@@ -62,3 +63,4 @@ PROMOTION_TYPE = [
     ("kids day promotion")
 ]
 USER_IDS = {user: generate_uuid() for user in USERS}
+PROMOTIONS_IDS = {promotion: generate_uuid() for promotion in PROMOTION_TYPE}
