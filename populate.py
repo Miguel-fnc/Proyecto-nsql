@@ -1,11 +1,11 @@
 #POPULATE PARA CASSANDRA
-# Sample data
+#=======================================================================================
 import logging
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from cassandra.cluster import Cluster
-import model
+from Cassandra.model import create_keyspace, create_schema, bulk_insert
 from connect import get_cassandra_session
 
 # Set logger
@@ -22,7 +22,8 @@ REPLICATION_FACTOR = os.getenv('CASSANDRA_REPLICATION_FACTOR', '1')
 log.info("Connecting to Cluster")
 session = get_cassandra_session()
 
-model.create_keyspace(session, KEYSPACE, REPLICATION_FACTOR)
+create_keyspace(session, KEYSPACE, REPLICATION_FACTOR)
 session.set_keyspace(KEYSPACE)
-model.create_schema(session)
-model.bulk_insert(session)
+create_schema(session)
+bulk_insert(session)
+#=======================================================================================
