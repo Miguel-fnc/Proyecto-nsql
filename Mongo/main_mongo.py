@@ -3,12 +3,12 @@ import falcon.asgi
 from pymongo import MongoClient
 import logging
 
-from Mongo.resources.products import ProductResource, ProductsResource
-from Mongo.resources.users import UserResource, UsersResource
-from Mongo.resources.orders import OrderResource, OrdersResource
-from Mongo.resources.categories import CategoriesResource
-from Mongo.resources.brands import BrandsResource
-from Mongo.resources.promotions import PromotionsResource
+from resources.products import ProductResource, ProductsResource
+from resources.users import UserResource, UsersResource
+from resources.orders import OrderResource, OrdersResource
+from resources.categories import CategoriesResource
+from resources.brands import BrandsResource
+from resources.promotions import PromotionsResource
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

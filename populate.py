@@ -176,36 +176,38 @@ def populate_mongo():
     log.info("=== Populating MongoDB ===")
 
     # 1. Categories
-    categories = load_csv(".data/Mongo/categories.csv")
+    categories = load_csv("./data/Mongo/categories.csv")
     mongo_post_many("categories", categories)
 
     # 2. Brands
-    brands = load_csv(".data/Mongo/brands.csv")
+    brands = load_csv("./data/Mongo/brands.csv")
     mongo_post_many("brands", brands)
 
     # 3. Products
-    products = load_csv(".data/Mongo/products.csv")
+    products = load_csv("./data/Mongo/products.csv")
     for p in products:
         if "price" in p:
             p["price"] = float(p["price"])
     mongo_post_many("products", products)
 
     # 4. Users
-    users = load_csv(".data/Mongo/users.csv")
+    users = load_csv("./data/Mongo/users.csv")
     mongo_post_many("users", users)
 
     # 5. Orders
-    orders = load_csv(".data/Mongo/orders.csv")
+    orders = load_csv("./data/Mongo/orders.csv")
     for o in orders:
         if "total" in o:
             o["total"] = float(o["total"])
     mongo_post_many("orders", orders)
 
     # 6. Promotions
-    promotions = load_csv(".data/Mongo/promotions.csv")
+    promotions = load_csv("./data/Mongo/promotions.csv")
     for promo in promotions:
         if "discount" in promo:
             promo["discount"] = float(promo["discount"])
     mongo_post_many("promotions", promotions)
 
     log.info("=== MongoDB Population Completed ===")
+
+populate_mongo()

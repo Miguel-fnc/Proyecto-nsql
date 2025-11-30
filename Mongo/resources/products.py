@@ -52,3 +52,19 @@ class ProductsResource:
 
         resp.media = results
         resp.status = falcon.HTTP_200
+
+    async def on_post(self, req, resp):
+        data = await req.media
+
+        # Convertir price a float si viene como string
+        if "price" in data:
+            try:
+                data["price"] = float(data["price"])
+            except:
+                pass
+
+        result = self.db.products.insert_one(data)
+        data["_id"] = str(result.inserted_id)
+
+        resp.media = data
+        resp.status = falcon.HTTP_201
