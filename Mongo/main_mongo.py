@@ -20,10 +20,35 @@ class LoggingMiddleware:
     async def process_response(self, req, resp, resource, req_succeeded):
         logger.info(f"Response: {resp.status} for {req.method} {req.uri}")
 
+#  Creación de índices en MongoDB
+
+def ensure_indexes(db):
+    print("\n→ Verificando índices de MongoDB...")
+
+    # Products
+    db.products.create_index({
+        "name": "text",
+        "description": "text"
+    })
+    db.products.create_index([("category_id", 1), ("price", 1)])
+    db.products.create_index([("inventory.size", 1)])
+
+    # Orders
+    db.orders.create_index([("user_id", 1), ("purchase_date", -1)])
+
+    # Categories
+    db.categories.create_index([("name", "text")])
+
+    # Brands
+    db.brands.create_index([("name", "text")])
+
+    # Promotions
+    db.promotions.create_index([("start_date", 1), ("end_date", 1)])
 
 # MongoDB Connection
 client = MongoClient("mongodb://localhost:27017/")
 db = client.ecommerce_sports   
+ensure_indexes(db)
 
 # Falcon
 app = falcon.asgi.App(middleware=[LoggingMiddleware()])

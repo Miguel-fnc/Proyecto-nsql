@@ -1,6 +1,7 @@
 #POPULATE PARA CASSANDRA
 #=======================================================================================
 import logging
+import random
 import sys
 import os
 import requests
@@ -189,9 +190,43 @@ def populate_mongo():
         if "price" in p:
             p["price"] = float(p["price"])
     mongo_post_many("products", products)
+    product_names = [p["name"] for p in products]
+
 
     # 4. Users
     users = load_csv("./data/Mongo/users.csv")
+
+    for u in users:
+
+        # Address Dummy
+        u["addresses"] = [
+            {
+                "street": f"Calle {random.randint(1,99)}",
+                "city": "Guadalajara",
+                "country": "MX",
+                "postal": f"{random.randint(44000,44999)}"
+            }
+        ]
+
+        # Recent Purchases
+        u["recent_purchases"] = [
+            random.choice(product_names)
+        ]
+
+        # Favorites
+        u["favorites"] = random.sample(product_names, k=random.randint(1,3))
+
+        # Cart
+        chosen = random.choice(products)
+        u["cart"] = [
+            {
+                "product_id": chosen["name"],
+                "qty": random.randint(1, 2),
+                "size": "M",
+                "price": chosen["price"]
+            }
+        ]
+
     mongo_post_many("users", users)
 
     # 5. Orders
@@ -207,7 +242,5 @@ def populate_mongo():
         if "discount" in promo:
             promo["discount"] = float(promo["discount"])
     mongo_post_many("promotions", promotions)
-
-    log.info("=== MongoDB Population Completed ===")
 
 populate_mongo()
