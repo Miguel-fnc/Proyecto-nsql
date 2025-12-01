@@ -74,6 +74,27 @@ def consulta_errors_by_user(user_id):
 
 def consulta_promotions(promotion_id):
     promotions_by_user(cassandra_session, promotion_id)
+
+def borrar_todo():
+    # Borrar Dgraph
+    log.info("Borrando datos de Dgraph...")
+    drop_all(dgraph_client)
+    # Borrar Cassandra
+    log.info("Borrando datos de Cassandra...")
+    try:
+        from connect import get_cassandra_session
+        from cass import model_cassandra
+        import os
+        
+        KEYSPACE = os.getenv('CASSANDRA_KEYSPACE', 'ecommerce')
+        session = get_cassandra_session()
+        session.set_keyspace(KEYSPACE)
+        
+        model_cassandra.borrar_cassandra(session)
+        session.shutdown()
+    except Exception as e:
+        print(f"Error al borrar Cassandra: {e}")
+    
     
 #=======================================================================================
 
@@ -110,7 +131,7 @@ diccionarios = {
     'categorias': csv_a_diccionario('./data/Dgraph/categorias.csv')
 }
 
-# Exponer las funciones de consulta para que main.py las use
+# funciones de consulta para que main ßlas use
 def consulta_productos_comprados(usuarios_dicc):
     productos_comprados(dgraph_client, usuarios_dicc)
 
@@ -141,8 +162,6 @@ def consulta_marcas_populares(categorias_dicc):
 def consulta_productos_vistos(usuarios_dicc):
     productos_vistos(dgraph_client, usuarios_dicc)
 
-def borrar_todo():
-    drop_all(dgraph_client)
 
 #=======================================================================================
 # POPULATE MONGO

@@ -532,4 +532,12 @@ def promotions_by_user(session, promotion_id):
         print(f'Inicio de promoción: {row.promotion_start}')
         print(f'Fin de promoción: {row.promotion_end}')
         print("===============================\n")
-      
+
+def borrar_cassandra(session):
+    query = "SELECT table_name FROM system_schema.tables WHERE keyspace_name = %s"
+    keyspace = session.keyspace
+    rows = session.execute(query, [keyspace])
+    tablas = [row.table_name for row in rows]
+    for tabla in tablas:
+        query = f"TRUNCATE {tabla}"
+        session.execute(query)

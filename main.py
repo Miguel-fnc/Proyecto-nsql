@@ -25,6 +25,7 @@ def main_general():
             print("Saliendo...")
             populate.borrar_todo()
             sys.exit(0)
+            
         else:
             print("Opción no válida")
             continue
