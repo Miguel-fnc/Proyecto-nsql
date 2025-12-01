@@ -959,3 +959,897 @@ cassandra.cluster.NoHostAvailable: ('Unable to connect to any servers', {'127.0.
 2025-11-30 15:43:11,814 [INFO] root: Inserted into promotions: Regreso a clases
 2025-11-30 15:43:13,845 [INFO] root: Inserted into promotions: Promo Sudaderas
 2025-11-30 15:43:13,846 [INFO] root: === MongoDB Population Completed ===
+2025-11-30 15:57:15,491 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 15:57:15,491 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 15:57:15,495 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 15:57:15,497 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 15:57:15,503 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 15:57:15,522 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 15:57:15,525 [INFO] root: Creating logistics schema
+2025-11-30 15:57:15,619 [INFO] root: Connecting to Dgraph
+2025-11-30 15:57:15,627 [INFO] root: Loading Dgraph data...
+2025-11-30 15:57:15,717 [INFO] root: === Populating MongoDB ===
+2025-11-30 15:57:15,717 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 15:57:19,267 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 15:57:19,267 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 15:57:19,270 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 15:57:19,272 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 15:57:19,279 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 15:57:19,302 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 15:57:19,306 [INFO] root: Creating logistics schema
+2025-11-30 15:57:19,406 [INFO] root: Connecting to Dgraph
+2025-11-30 15:57:19,415 [INFO] root: Loading Dgraph data...
+2025-11-30 15:57:19,485 [INFO] root: === Populating MongoDB ===
+2025-11-30 15:57:19,485 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 17:46:03,823 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 17:46:03,823 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 17:46:03,830 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 17:46:03,832 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 17:46:03,843 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 17:46:03,861 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 17:46:03,866 [INFO] root: Creating logistics schema
+2025-11-30 17:46:03,977 [INFO] root: Connecting to Dgraph
+2025-11-30 17:46:04,018 [INFO] root: Loading Dgraph data...
+2025-11-30 17:46:04,090 [INFO] root: === Populating MongoDB ===
+2025-11-30 17:46:04,090 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 17:48:16,506 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 17:48:16,507 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 17:48:16,512 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 17:48:16,514 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 17:48:16,521 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 17:48:16,542 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 17:48:16,545 [INFO] root: Creating logistics schema
+2025-11-30 17:48:16,642 [INFO] root: Connecting to Dgraph
+2025-11-30 17:48:16,674 [INFO] root: Loading Dgraph data...
+2025-11-30 17:48:16,740 [INFO] root: === Populating MongoDB ===
+2025-11-30 17:48:16,740 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 17:50:54,906 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 17:50:54,907 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 17:50:54,910 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 17:50:54,912 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 17:50:54,920 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 17:50:54,941 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 17:50:54,944 [INFO] root: Creating logistics schema
+2025-11-30 17:50:55,056 [INFO] root: Connecting to Dgraph
+2025-11-30 17:50:55,067 [INFO] root: Loading Dgraph data...
+2025-11-30 17:50:55,134 [INFO] root: === Populating MongoDB ===
+2025-11-30 17:50:55,135 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 17:55:51,333 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 17:55:51,333 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 17:55:51,337 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 17:55:51,339 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 17:55:51,347 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 17:55:51,368 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 17:55:51,373 [INFO] root: Creating logistics schema
+2025-11-30 17:55:51,502 [INFO] root: Connecting to Dgraph
+2025-11-30 17:55:51,513 [INFO] root: Loading Dgraph data...
+2025-11-30 17:55:51,581 [INFO] root: === Populating MongoDB ===
+2025-11-30 17:55:51,582 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 17:57:58,741 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 17:57:58,742 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 17:57:58,746 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 17:57:58,748 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 17:57:58,756 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 17:57:58,776 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 17:57:58,782 [INFO] root: Creating logistics schema
+2025-11-30 17:57:58,903 [INFO] root: Connecting to Dgraph
+2025-11-30 17:57:58,921 [INFO] root: Loading Dgraph data...
+2025-11-30 17:57:58,990 [INFO] root: === Populating MongoDB ===
+2025-11-30 17:57:58,990 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 18:05:24,188 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 18:05:24,189 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 18:05:24,192 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:05:24,193 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:05:24,199 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 18:05:24,260 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 18:05:24,264 [INFO] root: Creating logistics schema
+2025-11-30 18:05:24,364 [INFO] root: Connecting to Dgraph
+2025-11-30 18:05:24,377 [INFO] root: Loading Dgraph data...
+2025-11-30 18:05:24,447 [INFO] root: === Populating MongoDB ===
+2025-11-30 18:05:24,447 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 18:07:07,258 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 18:07:07,258 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 18:07:07,263 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:07:07,265 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:07:07,271 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 18:07:07,291 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 18:07:07,295 [INFO] root: Creating logistics schema
+2025-11-30 18:07:07,430 [INFO] root: Connecting to Dgraph
+2025-11-30 18:07:07,449 [INFO] root: Loading Dgraph data...
+2025-11-30 18:07:07,535 [INFO] root: === Populating MongoDB ===
+2025-11-30 18:07:07,535 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 18:22:47,519 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 18:22:47,519 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 18:22:47,525 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:22:47,527 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:22:47,538 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 18:22:47,558 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 18:22:47,562 [INFO] root: Creating logistics schema
+2025-11-30 18:22:47,671 [INFO] root: Connecting to Dgraph
+2025-11-30 18:22:47,774 [INFO] root: Loading Dgraph data...
+2025-11-30 18:22:47,854 [INFO] root: === Populating MongoDB ===
+2025-11-30 18:22:47,855 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 18:28:08,422 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 18:28:08,423 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 18:28:08,427 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:28:08,429 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:28:08,436 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 18:28:08,458 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 18:28:08,465 [INFO] root: Creating logistics schema
+2025-11-30 18:28:08,563 [INFO] root: Connecting to Dgraph
+2025-11-30 18:28:08,575 [INFO] root: Loading Dgraph data...
+2025-11-30 18:28:08,645 [INFO] root: === Populating MongoDB ===
+2025-11-30 18:28:08,645 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 18:55:01,540 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 18:55:01,541 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 18:55:01,549 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:55:01,551 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:55:01,565 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 18:55:01,583 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 18:55:01,587 [INFO] root: Creating logistics schema
+2025-11-30 18:55:01,695 [INFO] root: Connecting to Dgraph
+2025-11-30 18:55:01,764 [INFO] root: Loading Dgraph data...
+2025-11-30 18:55:01,845 [INFO] root: === Populating MongoDB ===
+2025-11-30 18:55:01,845 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 18:55:01,857 [INFO] root: Inserted into categories: Playeras
+2025-11-30 18:55:01,861 [INFO] root: Inserted into categories: Tenis
+2025-11-30 18:55:01,865 [INFO] root: Inserted into categories: Accesorios
+2025-11-30 18:55:01,869 [INFO] root: Inserted into categories: Balones
+2025-11-30 18:55:01,872 [INFO] root: Inserted into categories: Shorts
+2025-11-30 18:55:01,875 [INFO] root: Inserted into categories: Sudaderas
+2025-11-30 18:55:01,879 [INFO] root: Inserted into categories: Calcetas
+2025-11-30 18:55:01,882 [INFO] root: Inserted into categories: Gorras
+2025-11-30 18:55:01,886 [INFO] root: Inserted into categories: Mochilas
+2025-11-30 18:55:01,889 [INFO] root: Inserted into categories: Pants
+2025-11-30 18:55:01,890 [INFO] root: Populating Mongo endpoint: brands
+2025-11-30 18:55:01,893 [INFO] root: Inserted into brands: Nike
+2025-11-30 18:55:01,898 [INFO] root: Inserted into brands: Adidas
+2025-11-30 18:55:01,902 [INFO] root: Inserted into brands: Puma
+2025-11-30 18:55:01,905 [INFO] root: Inserted into brands: Under Armour
+2025-11-30 18:55:01,908 [INFO] root: Inserted into brands: Reebok
+2025-11-30 18:55:01,911 [INFO] root: Inserted into brands: New Balance
+2025-11-30 18:55:01,914 [INFO] root: Inserted into brands: Asics
+2025-11-30 18:55:01,918 [INFO] root: Inserted into brands: Jordan
+2025-11-30 18:55:01,922 [INFO] root: Inserted into brands: Champion
+2025-11-30 18:55:01,926 [INFO] root: Inserted into brands: Fila
+2025-11-30 18:55:01,930 [INFO] root: Inserted into brands: Columbia
+2025-11-30 18:55:01,934 [INFO] root: Inserted into brands: Wilson
+2025-11-30 18:55:01,934 [INFO] root: Populating Mongo endpoint: products
+2025-11-30 18:55:01,938 [INFO] root: Inserted into products: Playera Nike Dri-Fit
+2025-11-30 18:55:01,942 [INFO] root: Inserted into products: Playera Adidas Training
+2025-11-30 18:55:01,945 [INFO] root: Inserted into products: Playera Puma Active
+2025-11-30 18:55:01,949 [INFO] root: Inserted into products: Playera Under Armour HeatGear
+2025-11-30 18:55:01,953 [INFO] root: Inserted into products: Tenis Nike Revolution 6
+2025-11-30 18:55:01,958 [INFO] root: Inserted into products: Tenis Adidas Ultraboost 22
+2025-11-30 18:55:01,962 [INFO] root: Inserted into products: Tenis Puma Velocity Nitro
+2025-11-30 18:55:01,966 [INFO] root: Inserted into products: Tenis Asics Gel Nimbus
+2025-11-30 18:55:01,970 [INFO] root: Inserted into products: Balón Adidas FIFA Quality
+2025-11-30 18:55:01,975 [INFO] root: Inserted into products: Balón Puma Liga
+2025-11-30 18:55:01,979 [INFO] root: Inserted into products: Balón Wilson NBA Replica
+2025-11-30 18:55:01,983 [INFO] root: Inserted into products: Gorra Nike Legacy
+2025-11-30 18:55:01,987 [INFO] root: Inserted into products: Gorra Adidas Sport
+2025-11-30 18:55:01,991 [INFO] root: Inserted into products: Mochila Under Armour Hustle
+2025-11-30 18:55:01,995 [INFO] root: Inserted into products: Mochila Puma Challenger
+2025-11-30 18:55:01,999 [INFO] root: Inserted into products: Shorts Adidas Climalite
+2025-11-30 18:55:02,004 [INFO] root: Inserted into products: Shorts Nike Running 7in
+2025-11-30 18:55:02,009 [INFO] root: Inserted into products: Sudadera Nike Sportswear
+2025-11-30 18:55:02,014 [INFO] root: Inserted into products: Sudadera Adidas Essentials
+2025-11-30 18:55:02,019 [INFO] root: Inserted into products: Pants Puma Essentials
+2025-11-30 18:55:02,020 [INFO] root: Populating Mongo endpoint: users
+2025-11-30 18:55:02,030 [INFO] root: Inserted into users: Luis Hernández
+2025-11-30 18:55:02,036 [INFO] root: Inserted into users: Sofía Ortega
+2025-11-30 18:55:02,041 [INFO] root: Inserted into users: Carmen Ramírez
+2025-11-30 18:55:02,044 [INFO] root: Inserted into users: Jorge Martínez
+2025-11-30 18:55:02,049 [INFO] root: Inserted into users: Fernanda López
+2025-11-30 18:55:02,054 [INFO] root: Inserted into users: Arturo Méndez
+2025-11-30 18:55:02,059 [INFO] root: Inserted into users: Paola Sánchez
+2025-11-30 18:55:02,063 [INFO] root: Inserted into users: Carlos Gómez
+2025-11-30 18:55:02,064 [INFO] root: Populating Mongo endpoint: orders
+2025-11-30 18:55:02,069 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:02,074 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:02,079 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:02,084 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:02,088 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:02,093 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:02,098 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:02,104 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:02,108 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:02,112 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:02,117 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:02,122 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:02,122 [INFO] root: Populating Mongo endpoint: promotions
+2025-11-30 18:55:02,127 [INFO] root: Inserted into promotions: Promo Enero
+2025-11-30 18:55:02,132 [INFO] root: Inserted into promotions: Promo Tenis
+2025-11-30 18:55:02,138 [INFO] root: Inserted into promotions: Hot Sale Accesorios
+2025-11-30 18:55:02,144 [INFO] root: Inserted into promotions: Liquidación Balones
+2025-11-30 18:55:02,152 [INFO] root: Inserted into promotions: Semana Puma
+2025-11-30 18:55:02,158 [INFO] root: Inserted into promotions: Semana Nike
+2025-11-30 18:55:02,163 [INFO] root: Inserted into promotions: Regreso a clases
+2025-11-30 18:55:02,168 [INFO] root: Inserted into promotions: Promo Sudaderas
+2025-11-30 18:55:11,688 [INFO] root: Connecting to Cluster
+2025-11-30 18:55:11,689 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 18:55:11,693 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:55:11,694 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:55:11,701 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 18:55:24,571 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 18:55:24,571 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 18:55:24,571 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 18:55:24,571 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 18:55:24,575 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:55:24,575 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:55:24,577 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:55:24,577 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 18:55:24,583 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 18:55:24,583 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 18:55:24,611 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 18:55:24,611 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 18:55:24,616 [INFO] root: Creating logistics schema
+2025-11-30 18:55:24,616 [INFO] root: Creating logistics schema
+2025-11-30 18:55:24,733 [INFO] root: Connecting to Dgraph
+2025-11-30 18:55:24,733 [INFO] root: Connecting to Dgraph
+2025-11-30 18:55:24,750 [INFO] root: Loading Dgraph data...
+2025-11-30 18:55:24,750 [INFO] root: Loading Dgraph data...
+2025-11-30 18:55:24,835 [INFO] root: === Populating MongoDB ===
+2025-11-30 18:55:24,835 [INFO] root: === Populating MongoDB ===
+2025-11-30 18:55:24,835 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 18:55:24,835 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 18:55:24,843 [INFO] root: Inserted into categories: Playeras
+2025-11-30 18:55:24,843 [INFO] root: Inserted into categories: Playeras
+2025-11-30 18:55:24,847 [INFO] root: Inserted into categories: Tenis
+2025-11-30 18:55:24,847 [INFO] root: Inserted into categories: Tenis
+2025-11-30 18:55:24,851 [INFO] root: Inserted into categories: Accesorios
+2025-11-30 18:55:24,851 [INFO] root: Inserted into categories: Accesorios
+2025-11-30 18:55:24,854 [INFO] root: Inserted into categories: Balones
+2025-11-30 18:55:24,854 [INFO] root: Inserted into categories: Balones
+2025-11-30 18:55:24,857 [INFO] root: Inserted into categories: Shorts
+2025-11-30 18:55:24,857 [INFO] root: Inserted into categories: Shorts
+2025-11-30 18:55:24,859 [INFO] root: Inserted into categories: Sudaderas
+2025-11-30 18:55:24,859 [INFO] root: Inserted into categories: Sudaderas
+2025-11-30 18:55:24,863 [INFO] root: Inserted into categories: Calcetas
+2025-11-30 18:55:24,863 [INFO] root: Inserted into categories: Calcetas
+2025-11-30 18:55:24,866 [INFO] root: Inserted into categories: Gorras
+2025-11-30 18:55:24,866 [INFO] root: Inserted into categories: Gorras
+2025-11-30 18:55:24,870 [INFO] root: Inserted into categories: Mochilas
+2025-11-30 18:55:24,870 [INFO] root: Inserted into categories: Mochilas
+2025-11-30 18:55:24,874 [INFO] root: Inserted into categories: Pants
+2025-11-30 18:55:24,874 [INFO] root: Inserted into categories: Pants
+2025-11-30 18:55:24,874 [INFO] root: Populating Mongo endpoint: brands
+2025-11-30 18:55:24,874 [INFO] root: Populating Mongo endpoint: brands
+2025-11-30 18:55:24,877 [INFO] root: Inserted into brands: Nike
+2025-11-30 18:55:24,877 [INFO] root: Inserted into brands: Nike
+2025-11-30 18:55:24,882 [INFO] root: Inserted into brands: Adidas
+2025-11-30 18:55:24,882 [INFO] root: Inserted into brands: Adidas
+2025-11-30 18:55:24,886 [INFO] root: Inserted into brands: Puma
+2025-11-30 18:55:24,886 [INFO] root: Inserted into brands: Puma
+2025-11-30 18:55:24,889 [INFO] root: Inserted into brands: Under Armour
+2025-11-30 18:55:24,889 [INFO] root: Inserted into brands: Under Armour
+2025-11-30 18:55:24,892 [INFO] root: Inserted into brands: Reebok
+2025-11-30 18:55:24,892 [INFO] root: Inserted into brands: Reebok
+2025-11-30 18:55:24,896 [INFO] root: Inserted into brands: New Balance
+2025-11-30 18:55:24,896 [INFO] root: Inserted into brands: New Balance
+2025-11-30 18:55:24,899 [INFO] root: Inserted into brands: Asics
+2025-11-30 18:55:24,899 [INFO] root: Inserted into brands: Asics
+2025-11-30 18:55:24,902 [INFO] root: Inserted into brands: Jordan
+2025-11-30 18:55:24,902 [INFO] root: Inserted into brands: Jordan
+2025-11-30 18:55:24,907 [INFO] root: Inserted into brands: Champion
+2025-11-30 18:55:24,907 [INFO] root: Inserted into brands: Champion
+2025-11-30 18:55:24,911 [INFO] root: Inserted into brands: Fila
+2025-11-30 18:55:24,911 [INFO] root: Inserted into brands: Fila
+2025-11-30 18:55:24,914 [INFO] root: Inserted into brands: Columbia
+2025-11-30 18:55:24,914 [INFO] root: Inserted into brands: Columbia
+2025-11-30 18:55:24,918 [INFO] root: Inserted into brands: Wilson
+2025-11-30 18:55:24,918 [INFO] root: Inserted into brands: Wilson
+2025-11-30 18:55:24,919 [INFO] root: Populating Mongo endpoint: products
+2025-11-30 18:55:24,919 [INFO] root: Populating Mongo endpoint: products
+2025-11-30 18:55:24,924 [INFO] root: Inserted into products: Playera Nike Dri-Fit
+2025-11-30 18:55:24,924 [INFO] root: Inserted into products: Playera Nike Dri-Fit
+2025-11-30 18:55:24,928 [INFO] root: Inserted into products: Playera Adidas Training
+2025-11-30 18:55:24,928 [INFO] root: Inserted into products: Playera Adidas Training
+2025-11-30 18:55:24,933 [INFO] root: Inserted into products: Playera Puma Active
+2025-11-30 18:55:24,933 [INFO] root: Inserted into products: Playera Puma Active
+2025-11-30 18:55:24,937 [INFO] root: Inserted into products: Playera Under Armour HeatGear
+2025-11-30 18:55:24,937 [INFO] root: Inserted into products: Playera Under Armour HeatGear
+2025-11-30 18:55:24,942 [INFO] root: Inserted into products: Tenis Nike Revolution 6
+2025-11-30 18:55:24,942 [INFO] root: Inserted into products: Tenis Nike Revolution 6
+2025-11-30 18:55:24,947 [INFO] root: Inserted into products: Tenis Adidas Ultraboost 22
+2025-11-30 18:55:24,947 [INFO] root: Inserted into products: Tenis Adidas Ultraboost 22
+2025-11-30 18:55:24,952 [INFO] root: Inserted into products: Tenis Puma Velocity Nitro
+2025-11-30 18:55:24,952 [INFO] root: Inserted into products: Tenis Puma Velocity Nitro
+2025-11-30 18:55:24,956 [INFO] root: Inserted into products: Tenis Asics Gel Nimbus
+2025-11-30 18:55:24,956 [INFO] root: Inserted into products: Tenis Asics Gel Nimbus
+2025-11-30 18:55:24,961 [INFO] root: Inserted into products: Balón Adidas FIFA Quality
+2025-11-30 18:55:24,961 [INFO] root: Inserted into products: Balón Adidas FIFA Quality
+2025-11-30 18:55:24,967 [INFO] root: Inserted into products: Balón Puma Liga
+2025-11-30 18:55:24,967 [INFO] root: Inserted into products: Balón Puma Liga
+2025-11-30 18:55:24,971 [INFO] root: Inserted into products: Balón Wilson NBA Replica
+2025-11-30 18:55:24,971 [INFO] root: Inserted into products: Balón Wilson NBA Replica
+2025-11-30 18:55:24,977 [INFO] root: Inserted into products: Gorra Nike Legacy
+2025-11-30 18:55:24,977 [INFO] root: Inserted into products: Gorra Nike Legacy
+2025-11-30 18:55:24,981 [INFO] root: Inserted into products: Gorra Adidas Sport
+2025-11-30 18:55:24,981 [INFO] root: Inserted into products: Gorra Adidas Sport
+2025-11-30 18:55:24,986 [INFO] root: Inserted into products: Mochila Under Armour Hustle
+2025-11-30 18:55:24,986 [INFO] root: Inserted into products: Mochila Under Armour Hustle
+2025-11-30 18:55:24,990 [INFO] root: Inserted into products: Mochila Puma Challenger
+2025-11-30 18:55:24,990 [INFO] root: Inserted into products: Mochila Puma Challenger
+2025-11-30 18:55:24,995 [INFO] root: Inserted into products: Shorts Adidas Climalite
+2025-11-30 18:55:24,995 [INFO] root: Inserted into products: Shorts Adidas Climalite
+2025-11-30 18:55:24,998 [INFO] root: Inserted into products: Shorts Nike Running 7in
+2025-11-30 18:55:24,998 [INFO] root: Inserted into products: Shorts Nike Running 7in
+2025-11-30 18:55:25,001 [INFO] root: Inserted into products: Sudadera Nike Sportswear
+2025-11-30 18:55:25,001 [INFO] root: Inserted into products: Sudadera Nike Sportswear
+2025-11-30 18:55:25,004 [INFO] root: Inserted into products: Sudadera Adidas Essentials
+2025-11-30 18:55:25,004 [INFO] root: Inserted into products: Sudadera Adidas Essentials
+2025-11-30 18:55:25,007 [INFO] root: Inserted into products: Pants Puma Essentials
+2025-11-30 18:55:25,007 [INFO] root: Inserted into products: Pants Puma Essentials
+2025-11-30 18:55:25,008 [INFO] root: Populating Mongo endpoint: users
+2025-11-30 18:55:25,008 [INFO] root: Populating Mongo endpoint: users
+2025-11-30 18:55:25,011 [INFO] root: Inserted into users: Luis Hernández
+2025-11-30 18:55:25,011 [INFO] root: Inserted into users: Luis Hernández
+2025-11-30 18:55:25,016 [INFO] root: Inserted into users: Sofía Ortega
+2025-11-30 18:55:25,016 [INFO] root: Inserted into users: Sofía Ortega
+2025-11-30 18:55:25,021 [INFO] root: Inserted into users: Carmen Ramírez
+2025-11-30 18:55:25,021 [INFO] root: Inserted into users: Carmen Ramírez
+2025-11-30 18:55:25,025 [INFO] root: Inserted into users: Jorge Martínez
+2025-11-30 18:55:25,025 [INFO] root: Inserted into users: Jorge Martínez
+2025-11-30 18:55:25,029 [INFO] root: Inserted into users: Fernanda López
+2025-11-30 18:55:25,029 [INFO] root: Inserted into users: Fernanda López
+2025-11-30 18:55:25,033 [INFO] root: Inserted into users: Arturo Méndez
+2025-11-30 18:55:25,033 [INFO] root: Inserted into users: Arturo Méndez
+2025-11-30 18:55:25,038 [INFO] root: Inserted into users: Paola Sánchez
+2025-11-30 18:55:25,038 [INFO] root: Inserted into users: Paola Sánchez
+2025-11-30 18:55:25,043 [INFO] root: Inserted into users: Carlos Gómez
+2025-11-30 18:55:25,043 [INFO] root: Inserted into users: Carlos Gómez
+2025-11-30 18:55:25,043 [INFO] root: Populating Mongo endpoint: orders
+2025-11-30 18:55:25,043 [INFO] root: Populating Mongo endpoint: orders
+2025-11-30 18:55:25,047 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,047 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,052 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,052 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,056 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,056 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,061 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,061 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,065 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,065 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,070 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,070 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,075 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,075 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,080 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,080 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,085 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,085 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,090 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,090 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,094 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,094 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,099 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,099 [INFO] root: Inserted into orders: item
+2025-11-30 18:55:25,099 [INFO] root: Populating Mongo endpoint: promotions
+2025-11-30 18:55:25,099 [INFO] root: Populating Mongo endpoint: promotions
+2025-11-30 18:55:25,103 [INFO] root: Inserted into promotions: Promo Enero
+2025-11-30 18:55:25,103 [INFO] root: Inserted into promotions: Promo Enero
+2025-11-30 18:55:25,107 [INFO] root: Inserted into promotions: Promo Tenis
+2025-11-30 18:55:25,107 [INFO] root: Inserted into promotions: Promo Tenis
+2025-11-30 18:55:25,112 [INFO] root: Inserted into promotions: Hot Sale Accesorios
+2025-11-30 18:55:25,112 [INFO] root: Inserted into promotions: Hot Sale Accesorios
+2025-11-30 18:55:25,117 [INFO] root: Inserted into promotions: Liquidación Balones
+2025-11-30 18:55:25,117 [INFO] root: Inserted into promotions: Liquidación Balones
+2025-11-30 18:55:25,122 [INFO] root: Inserted into promotions: Semana Puma
+2025-11-30 18:55:25,122 [INFO] root: Inserted into promotions: Semana Puma
+2025-11-30 18:55:25,128 [INFO] root: Inserted into promotions: Semana Nike
+2025-11-30 18:55:25,128 [INFO] root: Inserted into promotions: Semana Nike
+2025-11-30 18:55:25,133 [INFO] root: Inserted into promotions: Regreso a clases
+2025-11-30 18:55:25,133 [INFO] root: Inserted into promotions: Regreso a clases
+2025-11-30 18:55:25,138 [INFO] root: Inserted into promotions: Promo Sudaderas
+2025-11-30 18:55:25,138 [INFO] root: Inserted into promotions: Promo Sudaderas
+2025-11-30 19:35:21,877 [WARNING] cassandra.cluster: Host 127.0.0.1:9042 has been marked down
+2025-11-30 19:35:21,877 [WARNING] cassandra.cluster: Host 127.0.0.1:9042 has been marked down
+2025-11-30 19:35:24,910 [WARNING] cassandra.cluster: Host 127.0.0.1:9042 has been marked down
+2025-11-30 19:35:24,910 [WARNING] cassandra.cluster: Host 127.0.0.1:9042 has been marked down
+2025-11-30 19:35:24,912 [WARNING] cassandra.cluster: [control connection] Error connecting to 127.0.0.1:9042:
+Traceback (most recent call last):
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3669, in _reconnect_internal
+    return self._try_connect(host)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3691, in _try_connect
+    connection = self._cluster.connection_factory(host.endpoint, is_control_connection=True)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 1670, in connection_factory
+    return self.connection_class.factory(endpoint, self.connect_timeout, *args, **kwargs)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/connection.py", line 857, in factory
+    conn = cls(endpoint, *args, **kwargs)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/io/libevreactor.py", line 267, in __init__
+    self._connect_socket()
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/connection.py", line 962, in _connect_socket
+    raise socket.error(sockerr.errno, "Tried connecting to %s. Last error: %s" %
+ConnectionRefusedError: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:24,912 [WARNING] cassandra.cluster: [control connection] Error connecting to 127.0.0.1:9042:
+Traceback (most recent call last):
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3669, in _reconnect_internal
+    return self._try_connect(host)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3691, in _try_connect
+    connection = self._cluster.connection_factory(host.endpoint, is_control_connection=True)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 1670, in connection_factory
+    return self.connection_class.factory(endpoint, self.connect_timeout, *args, **kwargs)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/connection.py", line 857, in factory
+    conn = cls(endpoint, *args, **kwargs)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/io/libevreactor.py", line 267, in __init__
+    self._connect_socket()
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/connection.py", line 962, in _connect_socket
+    raise socket.error(sockerr.errno, "Tried connecting to %s. Last error: %s" %
+ConnectionRefusedError: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:25,951 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 2.04 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:25,951 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 2.04 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:28,016 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 1.86 seconds: errors=Timed out creating connection (5 seconds), last_host=None
+2025-11-30 19:35:28,016 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 1.86 seconds: errors=Timed out creating connection (5 seconds), last_host=None
+2025-11-30 19:35:28,029 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 3.8 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:28,029 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 3.8 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:29,981 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 3.48 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:29,981 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 3.48 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:31,871 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 7.6 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:31,871 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 7.6 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:33,492 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 6.88 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:33,492 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 6.88 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:39,538 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 15.84 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:39,538 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 15.84 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:40,448 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 13.6 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:40,448 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 13.6 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:54,078 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 27.2 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:54,078 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 27.2 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:55,448 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 27.84 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:35:55,448 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 27.84 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:36:21,286 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 54.4 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:36:21,286 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 54.4 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:36:23,390 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 72.32 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:36:23,390 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 72.32 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:37:15,730 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 130.56 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:37:15,730 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 130.56 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:37:35,765 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 128.0 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:37:35,765 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 128.0 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:39:26,319 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 261.12 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:39:26,319 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 261.12 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:39:43,867 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 266.24 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:39:43,867 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 266.24 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:43:47,468 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 563.2 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:43:47,468 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 563.2 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:44:10,216 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 532.48 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:44:10,216 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 532.48 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:53:02,747 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 600.0 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:53:02,747 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 600.0 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:53:10,713 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 600.0 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 19:53:10,713 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 600.0 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 20:03:02,819 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 600.0 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 20:03:02,819 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 600.0 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 20:03:10,781 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 600.0 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 20:03:10,781 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 600.0 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 20:13:02,854 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 600.0 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 20:13:02,854 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 600.0 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 20:13:10,876 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 600.0 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 20:13:10,876 [WARNING] cassandra.pool: Error attempting to reconnect to 127.0.0.1:9042, scheduling retry in 600.0 seconds: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 20:16:20,383 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:16:20,383 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:16:20,384 [WARNING] cassandra.cluster: [control connection] Error connecting to 127.0.0.1:9042:
+Traceback (most recent call last):
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3669, in _reconnect_internal
+    return self._try_connect(host)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3691, in _try_connect
+    connection = self._cluster.connection_factory(host.endpoint, is_control_connection=True)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 1670, in connection_factory
+    return self.connection_class.factory(endpoint, self.connect_timeout, *args, **kwargs)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/connection.py", line 857, in factory
+    conn = cls(endpoint, *args, **kwargs)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/io/libevreactor.py", line 267, in __init__
+    self._connect_socket()
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/connection.py", line 962, in _connect_socket
+    raise socket.error(sockerr.errno, "Tried connecting to %s. Last error: %s" %
+ConnectionRefusedError: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 20:16:20,385 [ERROR] cassandra.cluster: Control connection failed to connect, shutting down Cluster:
+Traceback (most recent call last):
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 1740, in connect
+    self.control_connection.connect()
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3635, in connect
+    self._set_new_connection(self._reconnect_internal())
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3680, in _reconnect_internal
+    raise NoHostAvailable("Unable to connect to any servers", errors)
+cassandra.cluster.NoHostAvailable: ('Unable to connect to any servers', {'127.0.0.1:9042': ConnectionRefusedError(61, "Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused")})
+2025-11-30 20:16:25,347 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:16:25,348 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:16:25,348 [WARNING] cassandra.cluster: [control connection] Error connecting to 127.0.0.1:9042:
+Traceback (most recent call last):
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3669, in _reconnect_internal
+    return self._try_connect(host)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3691, in _try_connect
+    connection = self._cluster.connection_factory(host.endpoint, is_control_connection=True)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 1670, in connection_factory
+    return self.connection_class.factory(endpoint, self.connect_timeout, *args, **kwargs)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/connection.py", line 857, in factory
+    conn = cls(endpoint, *args, **kwargs)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/io/libevreactor.py", line 267, in __init__
+    self._connect_socket()
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/connection.py", line 962, in _connect_socket
+    raise socket.error(sockerr.errno, "Tried connecting to %s. Last error: %s" %
+ConnectionRefusedError: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 20:16:25,350 [ERROR] cassandra.cluster: Control connection failed to connect, shutting down Cluster:
+Traceback (most recent call last):
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 1740, in connect
+    self.control_connection.connect()
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3635, in connect
+    self._set_new_connection(self._reconnect_internal())
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3680, in _reconnect_internal
+    raise NoHostAvailable("Unable to connect to any servers", errors)
+cassandra.cluster.NoHostAvailable: ('Unable to connect to any servers', {'127.0.0.1:9042': ConnectionRefusedError(61, "Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused")})
+2025-11-30 20:16:27,253 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:16:27,254 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:16:27,254 [WARNING] cassandra.cluster: [control connection] Error connecting to 127.0.0.1:9042:
+Traceback (most recent call last):
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3669, in _reconnect_internal
+    return self._try_connect(host)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3691, in _try_connect
+    connection = self._cluster.connection_factory(host.endpoint, is_control_connection=True)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 1670, in connection_factory
+    return self.connection_class.factory(endpoint, self.connect_timeout, *args, **kwargs)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/connection.py", line 857, in factory
+    conn = cls(endpoint, *args, **kwargs)
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/io/libevreactor.py", line 267, in __init__
+    self._connect_socket()
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/connection.py", line 962, in _connect_socket
+    raise socket.error(sockerr.errno, "Tried connecting to %s. Last error: %s" %
+ConnectionRefusedError: [Errno 61] Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused
+2025-11-30 20:16:27,256 [ERROR] cassandra.cluster: Control connection failed to connect, shutting down Cluster:
+Traceback (most recent call last):
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 1740, in connect
+    self.control_connection.connect()
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3635, in connect
+    self._set_new_connection(self._reconnect_internal())
+  File "/Users/karenelizabg/Documents/Universidad/nsql/proyecto final/Proyecto-nsql/venv/lib/python3.9/site-packages/cassandra/cluster.py", line 3680, in _reconnect_internal
+    raise NoHostAvailable("Unable to connect to any servers", errors)
+cassandra.cluster.NoHostAvailable: ('Unable to connect to any servers', {'127.0.0.1:9042': ConnectionRefusedError(61, "Tried connecting to [('127.0.0.1', 9042)]. Last error: Connection refused")})
+2025-11-30 20:16:35,615 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:16:35,615 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:16:38,916 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:16:38,916 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:16:48,616 [INFO] root: Connecting to Cluster
+2025-11-30 20:16:48,616 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:16:48,640 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:16:48,644 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:16:48,687 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 20:17:18,858 [WARNING] cassandra.protocol: Server warning: `USE <keyspace>` with prepared statements is considered to be an anti-pattern due to ambiguity in non-qualified table names. Please consider removing instances of `Session#setKeyspace(<keyspace>)`, `Session#execute("USE <keyspace>")` and `cluster.newSession(<keyspace>)` from your code, and always use fully qualified table names (e.g. <keyspace>.<table>). Keyspace used: ecommerce, statement keyspace: ecommerce, statement id: 761be527282d2dad9cdbe8f863235b54
+2025-11-30 20:17:28,278 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:17:28,278 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:17:28,278 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:17:28,278 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:17:28,283 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:17:28,283 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:17:28,285 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:17:28,285 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:17:28,296 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 20:17:28,296 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 20:17:28,341 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 20:17:28,341 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 20:17:28,347 [INFO] root: Creating logistics schema
+2025-11-30 20:17:28,347 [INFO] root: Creating logistics schema
+2025-11-30 20:18:29,135 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:18:29,135 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:18:29,140 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:18:29,143 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:18:29,152 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 20:18:29,177 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 20:18:29,182 [INFO] root: Creating logistics schema
+2025-11-30 20:18:29,306 [INFO] root: Connecting to Dgraph
+2025-11-30 20:18:29,349 [INFO] root: Loading Dgraph data...
+2025-11-30 20:18:30,432 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:18:30,432 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:18:30,436 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:18:30,439 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:18:30,449 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 20:18:30,473 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 20:18:30,477 [INFO] root: Creating logistics schema
+2025-11-30 20:18:30,607 [INFO] root: Connecting to Dgraph
+2025-11-30 20:18:32,889 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:18:32,889 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:18:32,894 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:18:32,896 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:18:32,905 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 20:18:32,927 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 20:18:32,933 [INFO] root: Creating logistics schema
+2025-11-30 20:18:33,057 [INFO] root: Connecting to Dgraph
+2025-11-30 20:18:33,073 [INFO] root: Loading Dgraph data...
+2025-11-30 20:18:33,173 [INFO] root: === Populating MongoDB ===
+2025-11-30 20:18:33,173 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 20:18:33,189 [INFO] root: Inserted into categories: Playeras
+2025-11-30 20:18:33,193 [INFO] root: Inserted into categories: Tenis
+2025-11-30 20:18:33,197 [INFO] root: Inserted into categories: Accesorios
+2025-11-30 20:18:33,202 [INFO] root: Inserted into categories: Balones
+2025-11-30 20:18:33,206 [INFO] root: Inserted into categories: Shorts
+2025-11-30 20:18:33,210 [INFO] root: Inserted into categories: Sudaderas
+2025-11-30 20:18:33,214 [INFO] root: Inserted into categories: Calcetas
+2025-11-30 20:18:33,218 [INFO] root: Inserted into categories: Gorras
+2025-11-30 20:18:33,223 [INFO] root: Inserted into categories: Mochilas
+2025-11-30 20:18:33,227 [INFO] root: Inserted into categories: Pants
+2025-11-30 20:18:33,228 [INFO] root: Populating Mongo endpoint: brands
+2025-11-30 20:18:33,234 [INFO] root: Inserted into brands: Nike
+2025-11-30 20:18:33,239 [INFO] root: Inserted into brands: Adidas
+2025-11-30 20:18:33,243 [INFO] root: Inserted into brands: Puma
+2025-11-30 20:18:33,248 [INFO] root: Inserted into brands: Under Armour
+2025-11-30 20:18:33,251 [INFO] root: Inserted into brands: Reebok
+2025-11-30 20:18:33,256 [INFO] root: Inserted into brands: New Balance
+2025-11-30 20:18:33,261 [INFO] root: Inserted into brands: Asics
+2025-11-30 20:18:33,266 [INFO] root: Inserted into brands: Jordan
+2025-11-30 20:18:33,270 [INFO] root: Inserted into brands: Champion
+2025-11-30 20:18:33,275 [INFO] root: Inserted into brands: Fila
+2025-11-30 20:18:33,280 [INFO] root: Inserted into brands: Columbia
+2025-11-30 20:18:33,284 [INFO] root: Inserted into brands: Wilson
+2025-11-30 20:18:33,284 [INFO] root: Populating Mongo endpoint: products
+2025-11-30 20:18:33,293 [INFO] root: Inserted into products: Playera Nike Dri-Fit
+2025-11-30 20:18:33,298 [INFO] root: Inserted into products: Playera Adidas Training
+2025-11-30 20:18:33,303 [INFO] root: Inserted into products: Playera Puma Active
+2025-11-30 20:18:33,309 [INFO] root: Inserted into products: Playera Under Armour HeatGear
+2025-11-30 20:18:33,313 [INFO] root: Inserted into products: Tenis Nike Revolution 6
+2025-11-30 20:18:33,320 [INFO] root: Inserted into products: Tenis Adidas Ultraboost 22
+2025-11-30 20:18:33,325 [INFO] root: Inserted into products: Tenis Puma Velocity Nitro
+2025-11-30 20:18:33,330 [INFO] root: Inserted into products: Tenis Asics Gel Nimbus
+2025-11-30 20:18:33,335 [INFO] root: Inserted into products: Balón Adidas FIFA Quality
+2025-11-30 20:18:33,340 [INFO] root: Inserted into products: Balón Puma Liga
+2025-11-30 20:18:33,345 [INFO] root: Inserted into products: Balón Wilson NBA Replica
+2025-11-30 20:18:33,350 [INFO] root: Inserted into products: Gorra Nike Legacy
+2025-11-30 20:18:33,354 [INFO] root: Inserted into products: Gorra Adidas Sport
+2025-11-30 20:18:33,360 [INFO] root: Inserted into products: Mochila Under Armour Hustle
+2025-11-30 20:18:33,366 [INFO] root: Inserted into products: Mochila Puma Challenger
+2025-11-30 20:18:33,371 [INFO] root: Inserted into products: Shorts Adidas Climalite
+2025-11-30 20:18:33,376 [INFO] root: Inserted into products: Shorts Nike Running 7in
+2025-11-30 20:18:33,381 [INFO] root: Inserted into products: Sudadera Nike Sportswear
+2025-11-30 20:18:33,386 [INFO] root: Inserted into products: Sudadera Adidas Essentials
+2025-11-30 20:18:33,391 [INFO] root: Inserted into products: Pants Puma Essentials
+2025-11-30 20:18:33,392 [INFO] root: Populating Mongo endpoint: users
+2025-11-30 20:18:33,401 [INFO] root: Inserted into users: Luis Hernández
+2025-11-30 20:18:33,408 [INFO] root: Inserted into users: Sofía Ortega
+2025-11-30 20:18:33,413 [INFO] root: Inserted into users: Carmen Ramírez
+2025-11-30 20:18:33,419 [INFO] root: Inserted into users: Jorge Martínez
+2025-11-30 20:18:33,424 [INFO] root: Inserted into users: Fernanda López
+2025-11-30 20:18:33,430 [INFO] root: Inserted into users: Arturo Méndez
+2025-11-30 20:18:33,436 [INFO] root: Inserted into users: Paola Sánchez
+2025-11-30 20:18:33,442 [INFO] root: Inserted into users: Carlos Gómez
+2025-11-30 20:18:33,442 [INFO] root: Populating Mongo endpoint: orders
+2025-11-30 20:18:33,454 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:33,460 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:33,466 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:33,471 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:33,477 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:33,482 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:33,488 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:33,493 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:33,498 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:33,503 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:33,508 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:33,513 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:33,514 [INFO] root: Populating Mongo endpoint: promotions
+2025-11-30 20:18:33,525 [INFO] root: Inserted into promotions: Promo Enero
+2025-11-30 20:18:33,531 [INFO] root: Inserted into promotions: Promo Tenis
+2025-11-30 20:18:33,536 [INFO] root: Inserted into promotions: Hot Sale Accesorios
+2025-11-30 20:18:33,542 [INFO] root: Inserted into promotions: Liquidación Balones
+2025-11-30 20:18:33,547 [INFO] root: Inserted into promotions: Semana Puma
+2025-11-30 20:18:33,551 [INFO] root: Inserted into promotions: Semana Nike
+2025-11-30 20:18:33,557 [INFO] root: Inserted into promotions: Regreso a clases
+2025-11-30 20:18:33,563 [INFO] root: Inserted into promotions: Promo Sudaderas
+2025-11-30 20:18:41,482 [INFO] root: Connecting to Cluster
+2025-11-30 20:18:41,482 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:18:41,486 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:18:41,488 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:18:41,496 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 20:18:52,451 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:18:52,451 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:18:52,451 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:18:52,451 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:18:52,455 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:18:52,455 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:18:52,457 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:18:52,457 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:18:52,466 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 20:18:52,466 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 20:18:52,498 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 20:18:52,498 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 20:18:52,504 [INFO] root: Creating logistics schema
+2025-11-30 20:18:52,504 [INFO] root: Creating logistics schema
+2025-11-30 20:18:52,612 [INFO] root: Connecting to Dgraph
+2025-11-30 20:18:52,612 [INFO] root: Connecting to Dgraph
+2025-11-30 20:18:52,619 [INFO] root: Loading Dgraph data...
+2025-11-30 20:18:52,619 [INFO] root: Loading Dgraph data...
+2025-11-30 20:18:52,715 [INFO] root: === Populating MongoDB ===
+2025-11-30 20:18:52,715 [INFO] root: === Populating MongoDB ===
+2025-11-30 20:18:52,715 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 20:18:52,715 [INFO] root: Populating Mongo endpoint: categories
+2025-11-30 20:18:52,726 [INFO] root: Inserted into categories: Playeras
+2025-11-30 20:18:52,726 [INFO] root: Inserted into categories: Playeras
+2025-11-30 20:18:52,729 [INFO] root: Inserted into categories: Tenis
+2025-11-30 20:18:52,729 [INFO] root: Inserted into categories: Tenis
+2025-11-30 20:18:52,732 [INFO] root: Inserted into categories: Accesorios
+2025-11-30 20:18:52,732 [INFO] root: Inserted into categories: Accesorios
+2025-11-30 20:18:52,734 [INFO] root: Inserted into categories: Balones
+2025-11-30 20:18:52,734 [INFO] root: Inserted into categories: Balones
+2025-11-30 20:18:52,738 [INFO] root: Inserted into categories: Shorts
+2025-11-30 20:18:52,738 [INFO] root: Inserted into categories: Shorts
+2025-11-30 20:18:52,740 [INFO] root: Inserted into categories: Sudaderas
+2025-11-30 20:18:52,740 [INFO] root: Inserted into categories: Sudaderas
+2025-11-30 20:18:52,744 [INFO] root: Inserted into categories: Calcetas
+2025-11-30 20:18:52,744 [INFO] root: Inserted into categories: Calcetas
+2025-11-30 20:18:52,747 [INFO] root: Inserted into categories: Gorras
+2025-11-30 20:18:52,747 [INFO] root: Inserted into categories: Gorras
+2025-11-30 20:18:52,751 [INFO] root: Inserted into categories: Mochilas
+2025-11-30 20:18:52,751 [INFO] root: Inserted into categories: Mochilas
+2025-11-30 20:18:52,755 [INFO] root: Inserted into categories: Pants
+2025-11-30 20:18:52,755 [INFO] root: Inserted into categories: Pants
+2025-11-30 20:18:52,755 [INFO] root: Populating Mongo endpoint: brands
+2025-11-30 20:18:52,755 [INFO] root: Populating Mongo endpoint: brands
+2025-11-30 20:18:52,759 [INFO] root: Inserted into brands: Nike
+2025-11-30 20:18:52,759 [INFO] root: Inserted into brands: Nike
+2025-11-30 20:18:52,764 [INFO] root: Inserted into brands: Adidas
+2025-11-30 20:18:52,764 [INFO] root: Inserted into brands: Adidas
+2025-11-30 20:18:52,769 [INFO] root: Inserted into brands: Puma
+2025-11-30 20:18:52,769 [INFO] root: Inserted into brands: Puma
+2025-11-30 20:18:52,774 [INFO] root: Inserted into brands: Under Armour
+2025-11-30 20:18:52,774 [INFO] root: Inserted into brands: Under Armour
+2025-11-30 20:18:52,777 [INFO] root: Inserted into brands: Reebok
+2025-11-30 20:18:52,777 [INFO] root: Inserted into brands: Reebok
+2025-11-30 20:18:52,781 [INFO] root: Inserted into brands: New Balance
+2025-11-30 20:18:52,781 [INFO] root: Inserted into brands: New Balance
+2025-11-30 20:18:52,786 [INFO] root: Inserted into brands: Asics
+2025-11-30 20:18:52,786 [INFO] root: Inserted into brands: Asics
+2025-11-30 20:18:52,791 [INFO] root: Inserted into brands: Jordan
+2025-11-30 20:18:52,791 [INFO] root: Inserted into brands: Jordan
+2025-11-30 20:18:52,796 [INFO] root: Inserted into brands: Champion
+2025-11-30 20:18:52,796 [INFO] root: Inserted into brands: Champion
+2025-11-30 20:18:52,799 [INFO] root: Inserted into brands: Fila
+2025-11-30 20:18:52,799 [INFO] root: Inserted into brands: Fila
+2025-11-30 20:18:52,804 [INFO] root: Inserted into brands: Columbia
+2025-11-30 20:18:52,804 [INFO] root: Inserted into brands: Columbia
+2025-11-30 20:18:52,809 [INFO] root: Inserted into brands: Wilson
+2025-11-30 20:18:52,809 [INFO] root: Inserted into brands: Wilson
+2025-11-30 20:18:52,809 [INFO] root: Populating Mongo endpoint: products
+2025-11-30 20:18:52,809 [INFO] root: Populating Mongo endpoint: products
+2025-11-30 20:18:52,814 [INFO] root: Inserted into products: Playera Nike Dri-Fit
+2025-11-30 20:18:52,814 [INFO] root: Inserted into products: Playera Nike Dri-Fit
+2025-11-30 20:18:52,819 [INFO] root: Inserted into products: Playera Adidas Training
+2025-11-30 20:18:52,819 [INFO] root: Inserted into products: Playera Adidas Training
+2025-11-30 20:18:52,824 [INFO] root: Inserted into products: Playera Puma Active
+2025-11-30 20:18:52,824 [INFO] root: Inserted into products: Playera Puma Active
+2025-11-30 20:18:52,829 [INFO] root: Inserted into products: Playera Under Armour HeatGear
+2025-11-30 20:18:52,829 [INFO] root: Inserted into products: Playera Under Armour HeatGear
+2025-11-30 20:18:52,833 [INFO] root: Inserted into products: Tenis Nike Revolution 6
+2025-11-30 20:18:52,833 [INFO] root: Inserted into products: Tenis Nike Revolution 6
+2025-11-30 20:18:52,838 [INFO] root: Inserted into products: Tenis Adidas Ultraboost 22
+2025-11-30 20:18:52,838 [INFO] root: Inserted into products: Tenis Adidas Ultraboost 22
+2025-11-30 20:18:52,842 [INFO] root: Inserted into products: Tenis Puma Velocity Nitro
+2025-11-30 20:18:52,842 [INFO] root: Inserted into products: Tenis Puma Velocity Nitro
+2025-11-30 20:18:52,847 [INFO] root: Inserted into products: Tenis Asics Gel Nimbus
+2025-11-30 20:18:52,847 [INFO] root: Inserted into products: Tenis Asics Gel Nimbus
+2025-11-30 20:18:52,853 [INFO] root: Inserted into products: Balón Adidas FIFA Quality
+2025-11-30 20:18:52,853 [INFO] root: Inserted into products: Balón Adidas FIFA Quality
+2025-11-30 20:18:52,858 [INFO] root: Inserted into products: Balón Puma Liga
+2025-11-30 20:18:52,858 [INFO] root: Inserted into products: Balón Puma Liga
+2025-11-30 20:18:52,863 [INFO] root: Inserted into products: Balón Wilson NBA Replica
+2025-11-30 20:18:52,863 [INFO] root: Inserted into products: Balón Wilson NBA Replica
+2025-11-30 20:18:52,868 [INFO] root: Inserted into products: Gorra Nike Legacy
+2025-11-30 20:18:52,868 [INFO] root: Inserted into products: Gorra Nike Legacy
+2025-11-30 20:18:52,872 [INFO] root: Inserted into products: Gorra Adidas Sport
+2025-11-30 20:18:52,872 [INFO] root: Inserted into products: Gorra Adidas Sport
+2025-11-30 20:18:52,878 [INFO] root: Inserted into products: Mochila Under Armour Hustle
+2025-11-30 20:18:52,878 [INFO] root: Inserted into products: Mochila Under Armour Hustle
+2025-11-30 20:18:52,883 [INFO] root: Inserted into products: Mochila Puma Challenger
+2025-11-30 20:18:52,883 [INFO] root: Inserted into products: Mochila Puma Challenger
+2025-11-30 20:18:52,888 [INFO] root: Inserted into products: Shorts Adidas Climalite
+2025-11-30 20:18:52,888 [INFO] root: Inserted into products: Shorts Adidas Climalite
+2025-11-30 20:18:52,896 [INFO] root: Inserted into products: Shorts Nike Running 7in
+2025-11-30 20:18:52,896 [INFO] root: Inserted into products: Shorts Nike Running 7in
+2025-11-30 20:18:52,902 [INFO] root: Inserted into products: Sudadera Nike Sportswear
+2025-11-30 20:18:52,902 [INFO] root: Inserted into products: Sudadera Nike Sportswear
+2025-11-30 20:18:52,908 [INFO] root: Inserted into products: Sudadera Adidas Essentials
+2025-11-30 20:18:52,908 [INFO] root: Inserted into products: Sudadera Adidas Essentials
+2025-11-30 20:18:52,913 [INFO] root: Inserted into products: Pants Puma Essentials
+2025-11-30 20:18:52,913 [INFO] root: Inserted into products: Pants Puma Essentials
+2025-11-30 20:18:52,914 [INFO] root: Populating Mongo endpoint: users
+2025-11-30 20:18:52,914 [INFO] root: Populating Mongo endpoint: users
+2025-11-30 20:18:52,919 [INFO] root: Inserted into users: Luis Hernández
+2025-11-30 20:18:52,919 [INFO] root: Inserted into users: Luis Hernández
+2025-11-30 20:18:52,924 [INFO] root: Inserted into users: Sofía Ortega
+2025-11-30 20:18:52,924 [INFO] root: Inserted into users: Sofía Ortega
+2025-11-30 20:18:52,929 [INFO] root: Inserted into users: Carmen Ramírez
+2025-11-30 20:18:52,929 [INFO] root: Inserted into users: Carmen Ramírez
+2025-11-30 20:18:52,935 [INFO] root: Inserted into users: Jorge Martínez
+2025-11-30 20:18:52,935 [INFO] root: Inserted into users: Jorge Martínez
+2025-11-30 20:18:52,941 [INFO] root: Inserted into users: Fernanda López
+2025-11-30 20:18:52,941 [INFO] root: Inserted into users: Fernanda López
+2025-11-30 20:18:52,947 [INFO] root: Inserted into users: Arturo Méndez
+2025-11-30 20:18:52,947 [INFO] root: Inserted into users: Arturo Méndez
+2025-11-30 20:18:52,953 [INFO] root: Inserted into users: Paola Sánchez
+2025-11-30 20:18:52,953 [INFO] root: Inserted into users: Paola Sánchez
+2025-11-30 20:18:52,959 [INFO] root: Inserted into users: Carlos Gómez
+2025-11-30 20:18:52,959 [INFO] root: Inserted into users: Carlos Gómez
+2025-11-30 20:18:52,959 [INFO] root: Populating Mongo endpoint: orders
+2025-11-30 20:18:52,959 [INFO] root: Populating Mongo endpoint: orders
+2025-11-30 20:18:52,965 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:52,965 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:52,970 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:52,970 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:52,976 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:52,976 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:52,981 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:52,981 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:52,986 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:52,986 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:52,990 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:52,990 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:52,995 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:52,995 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:52,999 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:52,999 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:53,006 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:53,006 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:53,011 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:53,011 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:53,017 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:53,017 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:53,022 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:53,022 [INFO] root: Inserted into orders: item
+2025-11-30 20:18:53,022 [INFO] root: Populating Mongo endpoint: promotions
+2025-11-30 20:18:53,022 [INFO] root: Populating Mongo endpoint: promotions
+2025-11-30 20:18:53,027 [INFO] root: Inserted into promotions: Promo Enero
+2025-11-30 20:18:53,027 [INFO] root: Inserted into promotions: Promo Enero
+2025-11-30 20:18:53,032 [INFO] root: Inserted into promotions: Promo Tenis
+2025-11-30 20:18:53,032 [INFO] root: Inserted into promotions: Promo Tenis
+2025-11-30 20:18:53,037 [INFO] root: Inserted into promotions: Hot Sale Accesorios
+2025-11-30 20:18:53,037 [INFO] root: Inserted into promotions: Hot Sale Accesorios
+2025-11-30 20:18:53,041 [INFO] root: Inserted into promotions: Liquidación Balones
+2025-11-30 20:18:53,041 [INFO] root: Inserted into promotions: Liquidación Balones
+2025-11-30 20:18:53,046 [INFO] root: Inserted into promotions: Semana Puma
+2025-11-30 20:18:53,046 [INFO] root: Inserted into promotions: Semana Puma
+2025-11-30 20:18:53,051 [INFO] root: Inserted into promotions: Semana Nike
+2025-11-30 20:18:53,051 [INFO] root: Inserted into promotions: Semana Nike
+2025-11-30 20:18:53,057 [INFO] root: Inserted into promotions: Regreso a clases
+2025-11-30 20:18:53,057 [INFO] root: Inserted into promotions: Regreso a clases
+2025-11-30 20:18:53,063 [INFO] root: Inserted into promotions: Promo Sudaderas
+2025-11-30 20:18:53,063 [INFO] root: Inserted into promotions: Promo Sudaderas
+2025-11-30 20:23:13,620 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:23:13,620 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:23:13,625 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:23:13,626 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:23:13,633 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 20:23:13,655 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 20:23:13,659 [INFO] root: Creating logistics schema
+2025-11-30 20:23:13,768 [INFO] root: Connecting to Dgraph
+2025-11-30 20:23:13,785 [INFO] root: Loading Dgraph data...
+2025-11-30 20:23:32,029 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:23:32,030 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:23:32,033 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:23:32,036 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:23:32,043 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 20:23:32,066 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 20:23:32,069 [INFO] root: Creating logistics schema
+2025-11-30 20:23:32,169 [INFO] root: Connecting to Dgraph
+2025-11-30 20:23:32,178 [INFO] root: Loading Dgraph data...
+2025-11-30 20:23:36,195 [INFO] root: Connecting to Cluster
+2025-11-30 20:23:36,195 [INFO] root: Connecting to Cluster
+2025-11-30 20:23:36,196 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:23:36,196 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:23:36,202 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:23:36,202 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:23:36,205 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:23:36,205 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:23:36,214 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 20:23:36,214 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 20:23:48,261 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:23:48,261 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:23:48,267 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:23:48,268 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:23:48,276 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 20:23:48,297 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 20:23:48,301 [INFO] root: Creating logistics schema
+2025-11-30 20:23:48,410 [INFO] root: Connecting to Dgraph
+2025-11-30 20:23:48,420 [INFO] root: Loading Dgraph data...
+2025-11-30 20:23:53,346 [INFO] root: Connecting to Cassandra Cluster
+2025-11-30 20:23:53,346 [WARNING] cassandra.cluster: Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['127.0.0.1'], lbp = None)
+2025-11-30 20:23:53,350 [WARNING] cassandra.cluster: Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:23:53,351 [WARNING] cassandra.cluster: Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2025-11-30 20:23:53,358 [INFO] cassandra.policies: Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2025-11-30 20:23:53,379 [INFO] root: Creating keyspace: ecommerce with replication factor 1
+2025-11-30 20:23:53,383 [INFO] root: Creating logistics schema
+2025-11-30 20:23:53,491 [INFO] root: Connecting to Dgraph
+2025-11-30 20:23:53,499 [INFO] root: Loading Dgraph data...

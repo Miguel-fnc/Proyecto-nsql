@@ -12,8 +12,7 @@ def print_menu():
         8: "Productos favoritos de un usuario",
         9: "Marcas más populares por categoría",
         10: "Productos vistos por un usuario",
-        11: "Borrar TODO",
-        12: "Salir"
+        11: "Salir"
     }
 
     print("\n------ MENU DGRAPH ------")
@@ -50,15 +49,8 @@ def main():
         elif option == 10:
             populate.consulta_productos_vistos(diccionarios['usuarios'])
         elif option == 11:
-            confirm = input("¿Seguro que deseas borrar TODO? (s/n): ")
-            if confirm.lower() == "s":
-                populate.borrar_todo()
-                print("Base de datos eliminada")
-                diccionarios = { 'usuarios': {}, 'productos': {}, 'marcas': {}, 'categorias': {} }
-
-        elif option == 12:
             print("Saliendo de Dgraph...")
-            return  # Esto regresa al main general
+            return  # regresar al main principal
 
         else:
             print("Opción inválida")

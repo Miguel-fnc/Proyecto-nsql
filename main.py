@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import sys
-
+import populate
+1
 def main_general():
     while True:
         print("A qué base de datos quieres acceder?")
@@ -22,6 +23,7 @@ def main_general():
 
         elif db_option == 4:
             print("Saliendo...")
+            populate.borrar_todo()
             sys.exit(0)
         else:
             print("Opción no válida")
