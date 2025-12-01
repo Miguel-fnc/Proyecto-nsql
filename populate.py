@@ -117,6 +117,7 @@ load_relaciones(dgraph_client, "./data/Dgraph/relacion_en_categoria.csv", produc
 load_relaciones(dgraph_client, "./data/Dgraph/relacion_compro.csv", usuarios_uids, productos_uids, "COMPRO")
 load_relaciones(dgraph_client, "./data/Dgraph/relacion_vio.csv", usuarios_uids, productos_uids, "VIO")
 load_relaciones(dgraph_client, "./data/Dgraph/relacion_favoritos.csv", usuarios_uids, productos_uids, "AGREGO_A_FAVORITOS")
+load_relaciones(dgraph_client, "./data/Dgraph/relacion_similar.csv", productos_uids, productos_uids, "SIMILAR_A")
 
 #generar diccionarios para simplificar el menu
 marcas_dicc = csv_a_diccionario('./data/Dgraph/marcas.csv')
