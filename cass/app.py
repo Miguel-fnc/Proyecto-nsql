@@ -32,17 +32,23 @@ def print_menu():
     for key in mm_options.keys():
         print(key, '--', mm_options[key])
 
-
 def usersNames():
-    print("\n======Usuarios disponibles para ver información======\n")
-    print("Miguel Franco")
-    print("Angel aceves")
-    print("karen santana")
-    print("omar madriz")
-    print("abraham hernandez")
-    print("juan pablo perez")
-    print("emiliano villagran")
-    print("================================================\n")
+    users_dict = {
+        1: {"name": "Miguel Franco", "lower": "miguel franco"},
+        2: {"name": "Angel Aceves", "lower": "angel aceves"},
+        3: {"name": "Karen Santana", "lower": "karen santana"},
+        4: {"name": "Omar Madriz", "lower": "omar madriz"},
+        5: {"name": "Abraham Hernandez", "lower": "abraham hernandez"},
+        6: {"name": "Juan Pablo Perez", "lower": "juan pablo perez"},
+        7: {"name": "Emiliano Villagran", "lower": "emiliano villagran"}
+    }
+
+    print("\n======Usuarios disponibles para ver======\n")
+    for key in users_dict.keys():
+        print(f"{key}. {users_dict[key]['name']}")
+    print("=========================================\n")
+    
+    return users_dict
 
 def promotionNames():
     keys = PROMOTIONS_IDS.keys()
@@ -63,99 +69,88 @@ def main():
         print_menu()
         opt = int(input("\nSeleccione una opcion: "))
         print("\n---------------------------\n")
+        
         if opt == 1:
-            usersNames()
-            user = input("\nEscriba el nombre del usuario: ").strip().lower()
-            if user not in USER_IDS:
-                print(f"Usuario {user} no encontrado")
-                continue
+            users = usersNames()
+            option = int(input("\nIngrese el número del usuario: "))
+            user = users[option]["lower"]
             user_uuid = USER_IDS[user]
             print()
-            model_cassandra.searches_by_user(session, user_uuid) 
+            model_cassandra.searches_by_user(session, user_uuid)
+            
         elif opt == 2:
-            usersNames()
-            user = input("\nEscriba el nombre del usuario: ").strip().lower()
-            if user not in USER_IDS:
-                print(f"Usuario {user} no encontrado")
-                continue
+            users = usersNames()
+            option = int(input("\nIngrese el número del usuario: "))
+            user = users[option]["lower"]
             user_uuid = USER_IDS[user]
             print()
             model_cassandra.user_navigation_sessions(session,user_uuid)
+            
         elif opt == 3:
-            usersNames()
-            user = input("\nEscriba el nombre del usuario: ").strip().lower()
-            if user not in USER_IDS:
-                print(f"Usuario {user} no encontrado")
-                continue
+            users = usersNames()
+            option = int(input("\nIngrese el número del usuario: "))
+            user = users[option]["lower"]
             user_uuid = USER_IDS[user]
             print()
             model_cassandra.brands_searchs_by_user(session,user_uuid)
+            
         elif opt == 4:
-            usersNames()
-            user = input("\nEscriba el nombre del usuario: ").strip().lower()
-            if user not in USER_IDS:
-                print(f"Usuario {user} no encontrado")
-                continue
+            users = usersNames()
+            option = int(input("\nIngrese el número del usuario: "))
+            user = users[option]["lower"]
             user_uuid = USER_IDS[user]
             print()
             model_cassandra.products_views_by_user(session,user_uuid)
+            
         elif opt == 5:
-            usersNames()
-            user = input("\nEscriba el nombre del usuario: ").strip().lower()
-            if user not in USER_IDS:
-                print(f"Usuario {user} no encontrado")
-                continue
+            users = usersNames()
+            option = int(input("\nIngrese el número del usuario: "))
+            user = users[option]["lower"]
             user_uuid = USER_IDS[user]
             print()
             model_cassandra.purchases_by_user(session,user_uuid)
+            
         elif opt == 6:
-            usersNames()
-            user = input("\nEscriba el nombre del usuario: ").strip().lower()
-            if user not in USER_IDS:
-                print(f"Usuario {user} no encontrado")
-                continue
+            users = usersNames()
+            option = int(input("\nIngrese el número del usuario: "))
+            user = users[option]["lower"]
             user_uuid = USER_IDS[user]
             print()
             model_cassandra.clicked_ads_by_user(session,user_uuid)
+            
         elif opt == 7:
-            usersNames()
-            user = input("\nEscriba el nombre del usuario: ").strip().lower()
-            if user not in USER_IDS:
-                print(f"Usuario {user} no encontrado")
-                continue
+            users = usersNames()
+            option = int(input("\nIngrese el número del usuario: "))
+            user = users[option]["lower"]
             user_uuid = USER_IDS[user]
             print()
             model_cassandra.time_per_category_by_user(session,user_uuid)
+            
         elif opt == 8:
-            usersNames()
-            user = input("\nEscriba el nombre del usuario: ").strip().lower()
-            if user not in USER_IDS:
-                print(f"Usuario {user} no encontrado")
-                continue
+            users = usersNames()
+            option = int(input("\nIngrese el número del usuario: "))
+            user = users[option]["lower"]
             user_uuid = USER_IDS[user]
             print()
             model_cassandra.clicks_notifications_by_user(session,user_uuid)
+            
         elif opt == 9:
-            usersNames()
-            user = input("\nEscriba el nombre del usuario: ").strip().lower()
-            if user not in USER_IDS:
-                print(f"Usuario {user} no encontrado")
-                continue
+            users = usersNames()
+            option = int(input("\nIngrese el número del usuario: "))
+            user = users[option]["lower"]
             user_uuid = USER_IDS[user]
             print()
             model_cassandra.errors_by_user(session,user_uuid)
+            
         elif opt == 10:
             promotionNames()
             promotion = input("\nEscriba el nombre de la promoción: ").strip().lower()
-            if promotion not in PROMOTIONS_IDS:
-                print(f"Promoción {promotion} no encontrada")
-                continue
             promotion_uuid = PROMOTIONS_IDS[promotion]
             print()
             model_cassandra.promotions_by_user(session,promotion_uuid)
+            
         elif opt == 11:
             break
-
         
 
 if __name__ == '__main__':
