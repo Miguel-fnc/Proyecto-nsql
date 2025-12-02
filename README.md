@@ -2,23 +2,24 @@
 
 # Este proyecto tiene como objetivo que a traves de 3 bases de datos guardemos todo lo que sucede en una aplicacion de e-commerce
 
-# Los datos se insertaran a traves del archivo de populate.py en cuanto se corre la aplicacion.
-# El archivo de connect se encarga de levantar los clientes de las bases de datos para poder tener comunicacion con cada una
-# En el archivo main tendra toda la implementacion de la app
+# La base de datos de cassandra registra toda la interaccion del ususario con la pagina como son los anuncions vistos, errores por sesion, visitas de marca entre otros
 
-# BANDERAS
-# llamando a main.py y la bandera -h seguido de un user id mostrara el historial de busquedas del usuario
-# llamando a main.py y la bandera -s seguido de un user id mostrara las secciones visitadas del usuario
-# llamando a main.py y la bandera -m seguido de un user id mostrara las marcas vistas por un usuario
-# llamando a main.py y la bandera -p seguido de un user id mostrar los productos vistos por un usuario
-# llamando a main.py y la bandera -c seguido de un user id mostrara las compras de ese usuario
-# llamando a main.py y la bandera -a seguido de un user id mostrara los anuncions clickeados por el ususario
-# llamando a main.py y la bandera -u seguido de un user id -t y una categoria mostrara el tiempo que paso un usuario por esa categoria
-# llamando a main.py y la bandera -n seguido de un user id te mostrara los clicks que hizo el usuario en ciertas notificaciones
-# llamando a main.py y la bandera -e seguido de un user id te mostrara los errores que hubo en la sesion de ese usuario 
-# llamando a main.py y la bandera -d seguido de un promotion id te mostrara la efectividad de ese anuncio 
+# La base de datos de Dgraph crea relaciones de los usuarios con los productos, como los usuarios VIO tales productos o COMPRO productos, y hace las relaciones con las marcas y a que categorias pertenecen
+
+# La base de datos de Mongo maneja datos de manera flexible del catlogo y usuarios, realiza busquedas avanzadas con indices filtros por categoria y pipelines de agregacion.
+
+# Para llenar las bases de datos es necesario con correr solo el archivo de main ya que en ese archivo estamos importando el archivo de populate entonces a la hora de importar ya corre el archivo populate creando y llenando lo correspondiente
+
+# Se necesita tener un contendero corriendo de Mongo, cassandra y dgraph, puedes tener uno con ratel para poder visualiar los datos de dgraph.
+
+# Correr este comando para que funcione mongo 
+# python -m uvicorn main_mongo:app --reload (Levanta el servidor para la api de mongo)
+
+# Solo es necesario correr python main.py dentro de la carpeta madre del proyecto
+# Te mostrara un menu para ver que base de datos quieres usar y a partir de esa seleccion te manda a otro menu de la base de datos. 
+
+# Para salir de las bases de datos hay una opcion dentro del menu, que te regresa al menu principal con las bases de datos, y para salir del programa solo tecleas la opcion de salir dentro del menu.
 
 # Miguel Angel Franco Diaz 749169
 # Karen Elizabeth Gonzalez Santana 752913
 # Angel Aceves Manzo 751658
-
