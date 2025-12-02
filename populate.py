@@ -6,6 +6,7 @@ import os
 import requests
 from cass.model_cassandra import create_keyspace, create_schema, bulk_insert
 from connect import get_cassandra_session, get_dgraph_client
+
 # Set logger
 log = logging.getLogger()
 log.setLevel('INFO')
