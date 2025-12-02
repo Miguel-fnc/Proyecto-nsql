@@ -53,6 +53,20 @@ ensure_indexes(db)
 # Falcon
 app = falcon.asgi.App(middleware=[LoggingMiddleware()])
 
+class DropMongoResource:
+    def __init__(self, db):
+        self.db = db
+
+    async def on_delete(self, req, resp):
+        collections = self.db.list_collection_names()
+        for col in collections:
+            self.db[col].drop()
+
+        resp.media = {
+            "status": "ok",
+            "dropped": collections
+        }
+
 # Rutas
 app.add_route("/products", ProductsResource(db))
 app.add_route("/products/{pid}", ProductResource(db))
@@ -66,3 +80,5 @@ app.add_route("/orders/{oid}", OrderResource(db))
 app.add_route("/categories", CategoriesResource(db))
 app.add_route("/brands", BrandsResource(db))
 app.add_route("/promotions", PromotionsResource(db))
+
+app.add_route("/drop_mongo", DropMongoResource(db))
